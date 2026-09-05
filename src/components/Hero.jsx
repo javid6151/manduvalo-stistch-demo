@@ -29,14 +29,14 @@ export default function Hero() {
         const container = containerRef.current;
         if (!container) return;
 
-        // Master Timeline pinned with ScrollTrigger - Snappy & Responsive
+        // Master Timeline pinned with ScrollTrigger - Silky Smooth Agency Easing
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container,
             start: 'top top',
             end: '+=50%',
             pin: true,
-            scrub: 0.35,
+            scrub: 1,
             anticipatePin: 1,
             invalidateOnRefresh: true,
           }
@@ -85,7 +85,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen bg-[#2d2119] overflow-hidden select-none isolate"
+      className="relative w-full h-screen bg-[#141210] overflow-hidden select-none isolate"
       id="portal-hero-section"
     >
       {/* =========================================================================
@@ -98,11 +98,11 @@ export default function Hero() {
         <img
           src="/images/manduva-hero.jpg"
           alt="Manduva Logillu Handcrafted Luxury Teakwood Furniture Hyderabad"
-          className="w-full h-full object-cover object-center brightness-[0.96] contrast-[1.06]"
+          className="w-full h-full object-cover object-center brightness-[0.98] contrast-[1.04]"
           loading="eager"
         />
         {/* Warm Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2d2119]/70 via-transparent to-[#2d2119]/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/70 via-transparent to-[#141210]/40 pointer-events-none" />
       </div>
 
       {/* =========================================================================
@@ -112,49 +112,43 @@ export default function Hero() {
       {/* Left Solid Teak Panel */}
       <div
         ref={leftPanelRef}
-        className="absolute top-0 bottom-0 left-0 w-[50.5vw] bg-[#2d2119] z-20 shadow-2xl border-r border-[#fb923c]/20 will-change-transform"
+        className="absolute top-0 bottom-0 left-0 w-[50.5vw] bg-[#141210] z-20 shadow-2xl border-r border-white/10 will-change-transform"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#382b21] via-[#2d2119] to-[#20150e] opacity-98" />
-        <div className="absolute top-0 bottom-0 right-0 w-[1.5px] bg-gradient-to-b from-[#fb923c]/10 via-[#fb923c]/50 to-[#fb923c]/10" />
+        <div className="absolute inset-0 bg-[#141210]" />
+        <div className="absolute top-0 bottom-0 right-0 w-[1px] bg-white/10" />
       </div>
 
       {/* Right Solid Teak Panel */}
       <div
         ref={rightPanelRef}
-        className="absolute top-0 bottom-0 right-0 w-[50.5vw] bg-[#2d2119] z-20 shadow-2xl border-l border-[#fb923c]/20 will-change-transform"
+        className="absolute top-0 bottom-0 right-0 w-[50.5vw] bg-[#141210] z-20 shadow-2xl border-l border-white/10 will-change-transform"
       >
-        <div className="absolute inset-0 bg-gradient-to-l from-[#382b21] via-[#2d2119] to-[#20150e] opacity-98" />
-        <div className="absolute top-0 bottom-0 left-0 w-[1.5px] bg-gradient-to-b from-[#fb923c]/10 via-[#fb923c]/50 to-[#fb923c]/10" />
+        <div className="absolute inset-0 bg-[#141210]" />
+        <div className="absolute top-0 bottom-0 left-0 w-[1px] bg-white/10" />
       </div>
 
       {/* =========================================================================
-          LAYER 3: HARMONIOUS SINGLE-LINE PORTAL TITLE (MANDUVA • LOGILLU)
+          LAYER 3: HARMONIOUS SINGLE-LINE PORTAL TITLE (MANDUVA LOGILLU)
          ========================================================================= */}
       <div
         ref={titleWrapperRef}
         className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-none will-change-transform px-4 sm:px-6 md:px-8"
       >
-        {/* Ambient Warm Aura behind the Title */}
-        <div className="absolute w-[80vw] max-w-4xl h-52 bg-gradient-to-r from-[#fb923c]/20 via-[#fdba74]/25 to-[#fb923c]/20 rounded-full blur-3xl -z-10 pointer-events-none" />
-
         {/* Proportional Single Horizontal Row - Never Wraps */}
-        <div className="flex items-center justify-center flex-nowrap whitespace-nowrap gap-2 sm:gap-4 md:gap-6 lg:gap-8 max-w-full">
+        <div className="flex items-center justify-center flex-nowrap whitespace-nowrap gap-3 sm:gap-5 md:gap-8 lg:gap-10 max-w-full">
           
           {/* First Span: MANDUVA (travels left) */}
           <span
             ref={leftSpanRef}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9.5rem] font-bold text-[#faf8f2] drop-shadow-[0_12px_30px_rgba(0,0,0,0.85)] will-change-transform inline-block leading-none tracking-tight"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9.5rem] font-bold text-[#FAF8F5] drop-shadow-[0_12px_30px_rgba(0,0,0,0.85)] will-change-transform inline-block leading-none tracking-tight"
           >
             MANDUVA
           </span>
 
-          {/* Center Glowing Dot */}
-          <span className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full bg-[#fb923c] shadow-[0_0_20px_#fb923c] shrink-0 animate-pulse my-auto" />
-
           {/* Last Span: LOGILLU (travels right) */}
           <span
             ref={rightSpanRef}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9.5rem] font-normal italic text-[#fb923c] drop-shadow-[0_12px_30px_rgba(0,0,0,0.85)] will-change-transform inline-block leading-none tracking-tight"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9.5rem] font-normal italic text-[#C49A6C] drop-shadow-[0_12px_30px_rgba(0,0,0,0.85)] will-change-transform inline-block leading-none tracking-tight"
           >
             LOGILLU
           </span>
@@ -162,7 +156,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-4 sm:mt-6 text-center">
-          <p className="font-sora text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.32em] sm:tracking-[0.4em] text-[#eadcc8] font-semibold drop-shadow-md">
+          <p className="text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#D5CEBF] font-medium drop-shadow-md">
             Resort • Villa • Farmhouse Furniture
           </p>
         </div>
@@ -175,30 +169,30 @@ export default function Hero() {
       {/* Top Edge Metadata */}
       <div 
         ref={metaTopRef}
-        className="absolute top-0 inset-x-0 z-30 pointer-events-none p-5 sm:p-8 md:p-10 flex items-center justify-between text-[10px] sm:text-xs font-sora tracking-[0.16em] uppercase text-[#eadcc8]/90 font-semibold"
+        className="absolute top-0 inset-x-0 z-30 pointer-events-none p-5 sm:p-8 md:p-10 flex items-center justify-between text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[#D5CEBF] font-medium"
       >
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#fb923c] animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-[#8A6738]" />
           <span>EST. HYDERABAD • TELANGANA</span>
         </div>
-        <div className="flex items-center gap-1.5 text-amber-400">
-          <Star className="w-3.5 h-3.5 fill-amber-400 text-[#fb923c]" />
-          <span className="text-[#faf8f2] font-bold">5.0</span>
-          <span className="hidden sm:inline text-[#eadcc8]/80">(24 GOOGLE REVIEWS)</span>
+        <div className="flex items-center gap-1.5 text-[#C49A6C]">
+          <Star className="w-3.5 h-3.5 fill-[#C49A6C] text-[#C49A6C]" />
+          <span className="text-[#FAF8F5] font-semibold">5.0</span>
+          <span className="hidden sm:inline text-[#D5CEBF]/80">(24 GOOGLE REVIEWS)</span>
         </div>
       </div>
 
       {/* Bottom Edge Metadata */}
       <div 
         ref={metaBottomRef}
-        className="absolute bottom-0 inset-x-0 z-30 pointer-events-none p-5 sm:p-8 md:p-10 flex items-center justify-end text-[10px] sm:text-xs font-sora tracking-[0.16em] uppercase text-[#eadcc8]/90 font-semibold"
+        className="absolute bottom-0 inset-x-0 z-30 pointer-events-none p-5 sm:p-8 md:p-10 flex items-center justify-end text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[#D5CEBF] font-medium"
       >
         <button
           onClick={handleScrollToUnveil}
-          className="pointer-events-auto flex items-center gap-2 px-4 py-2 rounded-full bg-[#382b21]/90 backdrop-blur-md border border-[#fb923c]/40 text-[#faf8f2] text-xs font-semibold hover:bg-[#fb923c] hover:text-[#2d2119] transition-all shadow-lg group"
+          className="pointer-events-auto flex items-center gap-2 px-4 py-2 rounded-full bg-[#141210]/80 backdrop-blur-md border border-white/15 text-[#FAF8F5] text-xs font-semibold hover:bg-[#141210] hover:border-[#C49A6C] transition-all shadow-md group"
         >
           <span>SCROLL OR CLICK TO UNVEIL</span>
-          <ChevronDown className="w-4 h-4 text-[#fb923c] group-hover:text-[#2d2119] group-hover:translate-y-0.5 transition-transform" />
+          <ChevronDown className="w-4 h-4 text-[#C49A6C] group-hover:translate-y-0.5 transition-transform" />
         </button>
       </div>
 

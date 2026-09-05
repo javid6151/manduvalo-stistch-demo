@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --bg-base: #faf8f2;
-    --color-cream: #fffaf2;
-    --color-peach: #fb923c;
-    --color-light-peach: #fdba74;
-    --color-deep-orange: #f97316;
-    --color-warm-beige: #eadcc8;
-    --color-dark-brown: #2d2119;
-    --color-charcoal-brown: #40342c;
-    --color-muted-brown: #76665a;
+    --bg-base: #FAF8F5;
+    --color-canvas: #FAF8F5;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #F3EFE8;
+    --color-text-primary: #1A1715;
+    --color-text-secondary: #68625A;
+    --color-border-subtle: #EAE5DC;
+    --color-accent-bronze: #8A6738;
+    --color-heritage-green: #1B5E43;
   }
 
   html {
@@ -21,87 +21,34 @@
 
   body {
     background-color: var(--bg-base);
-    color: var(--color-dark-brown);
-    font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+    color: var(--color-text-primary);
+    font-family: 'Plus Jakarta Sans', Inter, -apple-system, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -0.015em;
   }
 
   .font-display {
-    font-family: 'DM Serif Display', 'Cormorant Garamond', serif;
-    letter-spacing: -0.01em;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
   }
 }
 
-/* PEACH VELVET AURA GRADIENT SYSTEM */
+/* EDITORIAL GALLERY LUXURY SYSTEM */
 .aura-container {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background-color: #faf8f2;
+  background-color: #FAF8F5;
 }
 
 .aura-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  aria-hidden: true;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Layer 1 */
-.aura-layer-1 {
-  background: radial-gradient(ellipse 45% 50% at 30% 40%, rgba(251,146,60,0.6) 0%, transparent 60%);
-  filter: blur(163px);
-}
-
-@media (min-width: 1024px) {
-  .aura-layer-1 {
-    filter: blur(234px);
-  }
-}
-
-/* Layer 2 */
-.aura-layer-2 {
-  background: radial-gradient(ellipse 35% 40% at 70% 35%, rgba(253,186,116,0.5) 0%, transparent 55%);
-  filter: blur(138px);
-}
-
-@media (min-width: 1024px) {
-  .aura-layer-2 {
-    filter: blur(198px);
-  }
-}
-
-/* Layer 3 */
-.aura-layer-3 {
-  background: radial-gradient(ellipse 30% 35% at 50% 75%, rgba(249,115,22,0.35) 0%, transparent 50%);
-  filter: blur(125px);
-}
-
-@media (min-width: 1024px) {
-  .aura-layer-3 {
-    filter: blur(180px);
-  }
-}
-
-/* Layer 4 */
-.aura-layer-4 {
-  background: radial-gradient(ellipse 20% 22% at 80% 65%, rgba(255,237,213,0.5) 0%, transparent 45%);
-  filter: blur(100px);
-}
-
-@media (min-width: 1024px) {
-  .aura-layer-4 {
-    filter: blur(144px);
-  }
+  display: none !important;
 }
 
 .aura-content {
@@ -109,7 +56,7 @@
   z-index: 1;
 }
 
-/* Apple-Grade Easing & Micro-Animations */
+/* Professional Easing & Micro-Animations */
 .ease-apple {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -117,8 +64,8 @@
 /* Scroll reveal utility classes */
 .reveal-item {
   opacity: 0;
-  transform: translateY(28px) scale(0.99);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px) scale(0.995);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -127,7 +74,7 @@
   transform: translateY(0) scale(1);
 }
 
-/* Luxury Card Hover */
+/* Editorial Card Image Zoom */
 .img-zoom-lux {
   overflow: hidden;
 }
@@ -136,48 +83,38 @@
   will-change: transform;
 }
 .img-zoom-lux:hover img {
-  transform: scale(1.045);
+  transform: scale(1.035);
 }
 
-/* Subtle Shimmer & Pulse */
-@keyframes applePulse {
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.015); }
-}
-
-.animate-apple-pulse {
-  animation: applePulse 7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-/* Luxury Custom Scrollbar */
+/* Architectural Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #faf8f2;
+  background: #F3EFE8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #eadcc8;
+  background: #D5CEBF;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fb923c;
+  background: #8A6738;
 }
 
 /* Continuous Autoplaying Video Reel Motion Loop */
 @keyframes reelMotionLoop {
   0% { transform: scale(1.0) translate(0%, 0%); }
-  33% { transform: scale(1.12) translate(-2%, -3%); }
-  66% { transform: scale(1.08) translate(2%, -1%); }
-  100% { transform: scale(1.14) translate(-1%, 2%); }
+  33% { transform: scale(1.08) translate(-1.5%, -2%); }
+  66% { transform: scale(1.05) translate(1.5%, -1%); }
+  100% { transform: scale(1.1) translate(-1%, 1.5%); }
 }
 
 .reel-motion-active {
-  animation: reelMotionLoop 12s ease-in-out infinite alternate;
+  animation: reelMotionLoop 14s ease-in-out infinite alternate;
   will-change: transform;
 }
 

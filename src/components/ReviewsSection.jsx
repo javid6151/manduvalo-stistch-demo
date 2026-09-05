@@ -162,7 +162,7 @@ export default function ReviewsSection() {
   const loopingReels = [...videoReels, ...videoReels];
 
   return (
-    <section className="py-20 md:py-28 bg-[#faf8f2] border-t border-[#eadcc8] overflow-hidden" id="reviews-section">
+    <section className="py-20 md:py-28 bg-[#FAF8F5] border-t border-[#EAE5DC] overflow-hidden" id="reviews-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* =========================================================================
@@ -171,49 +171,49 @@ export default function ReviewsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           
           <ScrollReveal className="lg:col-span-7 space-y-4 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#eadcc8]/60 text-[#2d2119] text-xs font-semibold tracking-widest uppercase font-sora">
-              <Sparkles className="w-3.5 h-3.5 text-[#f97316]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE8] text-[#8A6738] border border-[#EAE5DC] text-xs font-semibold tracking-widest uppercase font-sans">
+              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
               <span>VERIFIED PATRON EXPERIENCES</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#2d2119]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715]">
               What Our Patrons Say
             </h2>
-            <p className="text-[#76665a] text-sm sm:text-base font-light leading-relaxed max-w-2xl">
-              Scroll through 6 showroom reels from <span className="font-semibold text-[#2d2119]">@manduva_logillu_furnitures</span>, or read verified 5.0 Google customer reviews.
+            <p className="text-[#68625A] text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+              Scroll through 6 showroom reels from <span className="font-semibold text-[#1A1715]">@manduva_logillu_furnitures</span>, or read verified 5.0 Google customer reviews.
             </p>
 
             {/* Filter Tabs */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2">
               <button
                 onClick={() => setActiveTab('all')}
-                className={`px-4 py-2 rounded-full text-xs font-semibold font-sora transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold font-sans transition-all ${
                   activeTab === 'all'
-                    ? 'bg-[#2d2119] text-[#faf8f2] shadow-sm'
-                    : 'bg-white text-[#40342c] border border-[#eadcc8] hover:bg-[#eadcc8]/40'
+                    ? 'bg-[#1A1715] text-white border border-[#1A1715] shadow-sm'
+                    : 'bg-white text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8] border border-[#EAE5DC]'
                 }`}
               >
                 All Experiences
               </button>
               <button
                 onClick={() => setActiveTab('videos')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold font-sora transition-all ${
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold font-sans transition-all ${
                   activeTab === 'videos'
-                    ? 'bg-[#2d2119] text-[#faf8f2] shadow-sm'
-                    : 'bg-white text-[#40342c] border border-[#eadcc8] hover:bg-[#eadcc8]/40'
+                    ? 'bg-[#1A1715] text-white border border-[#1A1715] shadow-sm'
+                    : 'bg-white text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8] border border-[#EAE5DC]'
                 }`}
               >
-                <InstagramIcon className="w-3.5 h-3.5 text-[#f97316]" />
+                <InstagramIcon className="w-3.5 h-3.5 text-[#8A6738]" />
                 <span>Showroom Video Reels</span>
               </button>
               <button
                 onClick={() => setActiveTab('google')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold font-sora transition-all ${
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold font-sans transition-all ${
                   activeTab === 'google'
-                    ? 'bg-[#2d2119] text-[#faf8f2] shadow-sm'
-                    : 'bg-white text-[#40342c] border border-[#eadcc8] hover:bg-[#eadcc8]/40'
+                    ? 'bg-[#1A1715] text-white border border-[#1A1715] shadow-sm'
+                    : 'bg-white text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8] border border-[#EAE5DC]'
                 }`}
               >
-                <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#8A6738]" />
                 <span>5.0 Google Reviews</span>
               </button>
             </div>
@@ -221,38 +221,38 @@ export default function ReviewsSection() {
 
           {/* Google Profile Card */}
           <ScrollReveal delay={150} className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#eadcc8] shadow-lux max-w-sm w-full space-y-3">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#EAE5DC] shadow-sm max-w-sm w-full space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg shadow-sm border border-blue-100">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] text-[#8A6738] flex items-center justify-center font-bold text-lg shadow-sm border border-[#EAE5DC]">
                     G
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-[#2d2119] block leading-tight">Google Reviews</span>
-                    <span className="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+                    <span className="text-sm font-bold text-[#1A1715] block leading-tight">Google Reviews</span>
+                    <span className="text-[11px] text-[#8A6738] font-semibold flex items-center gap-1">
                       <ShieldCheck className="w-3.5 h-3.5" /> 100% 5-Star Rating
                     </span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-3xl font-serif font-bold text-[#2d2119] leading-none">
+                  <div className="text-3xl font-serif font-bold text-[#1A1715] leading-none">
                     {googleProfileSummary.rating.toFixed(1)}
                   </div>
-                  <div className="flex text-amber-500 mt-1">
+                  <div className="flex text-[#8A6738] mt-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-[#8A6738] text-[#8A6738]" />
                     ))}
                   </div>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#eadcc8]/60 flex items-center justify-between text-xs font-sora">
-                <span className="text-[#76665a] font-medium">{googleProfileSummary.reviewCount} Verified Reviews</span>
+              <div className="pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-sans">
+                <span className="text-[#68625A] font-medium">{googleProfileSummary.reviewCount} Verified Reviews</span>
                 <a
                   href={googleProfileSummary.writeReviewUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-[#f97316] hover:text-[#2d2119] transition-colors flex items-center gap-1"
+                  className="font-bold text-[#8A6738] hover:text-[#1A1715] transition-colors flex items-center gap-1"
                 >
                   <span>Review Us</span>
                   <ExternalLink className="w-3 h-3" />
@@ -269,8 +269,8 @@ export default function ReviewsSection() {
         {(activeTab === 'all' || activeTab === 'videos') && (
           <ScrollReveal className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-[#2d2119] font-sora">
-                <InstagramIcon className="w-4 h-4 text-[#f97316]" />
+              <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-[#1A1715] font-sans">
+                <InstagramIcon className="w-4 h-4 text-[#8A6738]" />
                 <span>INSTAGRAM SHOWROOM REELS</span>
 
                 {/* User Preference Auto-Scroll Toggle Button */}
@@ -278,14 +278,14 @@ export default function ReviewsSection() {
                   onClick={() => setAutoScrollEnabled(!autoScrollEnabled)}
                   className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold transition-all ${
                     autoScrollEnabled 
-                      ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
-                      : 'bg-neutral-200 text-neutral-700 border border-neutral-300'
+                      ? 'bg-[#1A1715] text-white border border-[#1A1715]' 
+                      : 'bg-white text-[#68625A] border border-[#EAE5DC]'
                   }`}
                   title="Toggle Auto-Scroll"
                 >
                   {autoScrollEnabled ? (
                     <>
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8A6738]" />
                       <span>Auto-Scroll ON</span>
                     </>
                   ) : (
@@ -301,7 +301,7 @@ export default function ReviewsSection() {
               <div className="flex items-center gap-2.5">
                 <button
                   onClick={() => handleManualScroll('left')}
-                  className="p-2.5 rounded-full bg-white border border-[#eadcc8] text-[#2d2119] hover:bg-[#eadcc8] transition-colors shadow-sm cursor-pointer"
+                  className="p-2.5 rounded-full bg-white border border-[#EAE5DC] text-[#1A1715] hover:border-[#8A6738] transition-colors shadow-sm cursor-pointer"
                   aria-label="Scroll left"
                   title="Previous reel"
                 >
@@ -309,7 +309,7 @@ export default function ReviewsSection() {
                 </button>
                 <button
                   onClick={() => handleManualScroll('right')}
-                  className="p-2.5 rounded-full bg-white border border-[#eadcc8] text-[#2d2119] hover:bg-[#eadcc8] transition-colors shadow-sm cursor-pointer"
+                  className="p-2.5 rounded-full bg-white border border-[#EAE5DC] text-[#1A1715] hover:border-[#8A6738] transition-colors shadow-sm cursor-pointer"
                   aria-label="Scroll right"
                   title="Next reel"
                 >
@@ -319,7 +319,7 @@ export default function ReviewsSection() {
                   href={instagramChannelUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-[#2d2119] text-[#faf8f2] hover:bg-[#fb923c] hover:text-[#2d2119] text-xs font-bold flex items-center gap-1.5 transition-all font-sora shadow-sm"
+                  className="px-4 py-2 rounded-full bg-white text-[#1A1715] border border-[#EAE5DC] hover:border-[#8A6738] text-xs font-bold flex items-center gap-1.5 transition-all font-sans shadow-sm"
                 >
                   <InstagramIcon className="w-3.5 h-3.5" />
                   <span>View Reels Channel</span>
@@ -339,7 +339,7 @@ export default function ReviewsSection() {
               {loopingReels.map((reel, idx) => (
                 <div
                   key={`${reel.id}-${idx}`}
-                  className="w-[260px] sm:w-[280px] md:w-[300px] shrink-0 rounded-3xl overflow-hidden bg-[#2d2119] border border-[#eadcc8] shadow-lux hover:shadow-2xl transition-all duration-300 flex flex-col aspect-[9/15] relative group cursor-pointer hover:-translate-y-2 hover:scale-[1.02]"
+                  className="w-[260px] sm:w-[280px] md:w-[300px] shrink-0 rounded-3xl overflow-hidden bg-white border border-[#EAE5DC] hover:border-[#8A6738]/60 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col aspect-[9/15] relative group cursor-pointer hover:-translate-y-1"
                   onClick={() => setActiveReelModal(reel)}
                 >
                   {/* High Definition Showroom Photography with Smooth Hover Scale */}
@@ -347,59 +347,59 @@ export default function ReviewsSection() {
                     <img
                       src={reel.thumbnail}
                       alt={reel.title}
-                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 brightness-[0.96] contrast-[1.06]"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.96] contrast-[1.06]"
                       loading="lazy"
                     />
                   </div>
 
                   {/* Gradient Scrim for high-contrast typography */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/40 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/40 pointer-events-none" />
 
                   {/* Top Header Tags */}
                   <div className="absolute top-4 inset-x-4 flex items-center justify-between z-10">
-                    <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[#fdba74] text-[10px] font-bold tracking-wider font-sora flex items-center gap-1.5">
-                      <InstagramIcon className="w-3 h-3 text-[#fb923c]" />
+                    <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold tracking-wider font-sans flex items-center gap-1.5">
+                      <InstagramIcon className="w-3 h-3 text-[#D4AF37]" />
                       <span>{reel.category}</span>
                     </span>
 
-                    <span className="px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white/90 text-[10px] font-semibold font-sora">
+                    <span className="px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-stone-200 text-[10px] font-semibold font-sans">
                       {reel.duration}
                     </span>
                   </div>
 
                   {/* Central Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <div className="w-14 h-14 rounded-full bg-[#fb923c] text-[#2d2119] flex items-center justify-center shadow-2xl group-hover:scale-115 group-hover:bg-[#fdba74] transition-all duration-300 pl-0.5">
-                      <Play className="w-6 h-6 fill-[#2d2119]" />
+                    <div className="w-14 h-14 rounded-full bg-white/95 border border-white group-hover:scale-110 text-[#1A1715] flex items-center justify-center shadow-xl transition-all duration-300 pl-0.5">
+                      <Play className="w-6 h-6 fill-[#8A6738] text-[#8A6738]" />
                     </div>
                   </div>
 
                   {/* Bottom Video Metadata */}
                   <div className="absolute bottom-0 inset-x-0 p-5 text-white z-10 space-y-2">
-                    <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-[#fdba74] font-bold font-sora">
+                    <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-[#D4AF37] font-bold font-sans">
                       <span>{reel.author}</span>
-                      <span className="flex items-center gap-1.5 bg-black/50 px-2 py-0.5 rounded-full border border-white/15">
-                        <Eye className="w-3 h-3 text-[#fb923c]" />
+                      <span className="flex items-center gap-1.5 bg-black/50 px-2 py-0.5 rounded-full border border-white/10">
+                        <Eye className="w-3 h-3 text-[#D4AF37]" />
                         <span>{reel.views} Views</span>
                       </span>
                     </div>
                     
-                    <h4 className="font-serif text-base sm:text-lg font-bold leading-snug group-hover:text-[#fdba74] transition-colors line-clamp-1">
+                    <h4 className="font-serif text-base sm:text-lg font-bold leading-snug group-hover:text-[#D4AF37] transition-colors line-clamp-1">
                       {reel.title}
                     </h4>
 
-                    <p className="text-xs text-[#eadcc8]/80 line-clamp-2 font-light leading-relaxed">
+                    <p className="text-xs text-stone-300 line-clamp-2 font-light leading-relaxed">
                       {reel.subtitle}
                     </p>
 
                     {/* Likes & Comments Engagement Stats */}
-                    <div className="flex items-center gap-3 pt-1 text-[10px] text-white/70 font-sora border-t border-white/10">
+                    <div className="flex items-center gap-3 pt-1 text-[10px] text-stone-300 font-sans border-t border-white/15">
                       <span className="flex items-center gap-1">
-                        <Heart className="w-3 h-3 text-red-400 fill-red-400" />
+                        <Heart className="w-3 h-3 text-[#D4AF37] fill-[#D4AF37]" />
                         <span>{reel.likes}</span>
                       </span>
                       <span className="flex items-center gap-1">
-                        <MessageCircle className="w-3 h-3 text-white/80" />
+                        <MessageCircle className="w-3 h-3 text-stone-300" />
                         <span>{reel.comments} comments</span>
                       </span>
                     </div>
@@ -408,7 +408,7 @@ export default function ReviewsSection() {
               ))}
             </div>
 
-            <div className="flex items-center justify-between text-xs text-[#76665a] font-sora pt-2 px-1">
+            <div className="flex items-center justify-between text-xs text-[#68625A] font-sans pt-2 px-1">
               <span>Swipe or click arrows to browse • Click any card to watch video walkthrough</span>
               <span className="hidden sm:inline">6 Curated Showroom Reels</span>
             </div>
@@ -420,63 +420,63 @@ export default function ReviewsSection() {
            ========================================================================= */}
         {(activeTab === 'all' || activeTab === 'google') && (
           <ScrollReveal delay={200} className="space-y-6">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2d2119] font-sora">
-              <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1A1715] font-sans">
+              <Star className="w-4 h-4 fill-[#8A6738] text-[#8A6738]" />
               <span>VERIFIED GOOGLE TESTIMONIALS</span>
             </div>
 
             {/* Active Testimonial Card */}
-            <div className="p-8 sm:p-12 md:p-14 rounded-3xl bg-white border border-[#eadcc8] shadow-lux relative overflow-hidden">
-              <Quote className="absolute top-6 right-6 sm:top-10 sm:right-10 w-16 h-16 sm:w-24 sm:h-24 text-[#eadcc8]/40 pointer-events-none" />
+            <div className="p-8 sm:p-12 md:p-14 rounded-3xl bg-white border border-[#EAE5DC] shadow-sm relative overflow-hidden">
+              <Quote className="absolute top-6 right-6 sm:top-10 sm:right-10 w-16 h-16 sm:w-24 sm:h-24 text-[#EAE5DC]/60 pointer-events-none" />
 
               <div className="relative z-10 max-w-3xl space-y-6">
                 
                 {/* Star Rating */}
-                <div className="flex items-center gap-1.5 text-amber-500">
+                <div className="flex items-center gap-1.5 text-[#8A6738]">
                   {[...Array(verifiedReviews[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-500" />
+                    <Star key={i} className="w-5 h-5 fill-[#8A6738] text-[#8A6738]" />
                   ))}
-                  <span className="ml-2 text-xs font-bold text-[#2d2119] uppercase tracking-wider font-sora">
+                  <span className="ml-2 text-xs font-bold text-[#8A6738] uppercase tracking-wider font-sans">
                     5.0 Exceptional Quality
                   </span>
                 </div>
 
                 {/* Review Text */}
-                <p className="font-serif text-xl sm:text-2xl md:text-3xl font-light text-[#2d2119] leading-relaxed italic">
+                <p className="font-serif text-xl sm:text-2xl md:text-3xl font-normal text-[#1A1715] leading-relaxed italic">
                   "{verifiedReviews[currentIndex].text}"
                 </p>
 
                 {/* Author Information */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 border-t border-[#eadcc8]/60 gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 border-t border-[#EAE5DC] gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-full bg-[#2d2119] text-[#faf8f2] flex items-center justify-center font-serif text-sm font-bold shadow-sm">
+                    <div className="w-11 h-11 rounded-full bg-[#FAF8F5] border border-[#EAE5DC] text-[#8A6738] flex items-center justify-center font-serif text-sm font-bold shadow-sm">
                       {verifiedReviews[currentIndex].avatar}
                     </div>
                     <div>
-                      <h4 className="font-serif text-base sm:text-lg font-bold text-[#2d2119]">
+                      <h4 className="font-serif text-base sm:text-lg font-bold text-[#1A1715]">
                         {verifiedReviews[currentIndex].author}
                       </h4>
-                      <span className="text-xs text-[#76665a] font-sora">
+                      <span className="text-xs text-[#68625A] font-sans">
                         {verifiedReviews[currentIndex].highlight}
                       </span>
                     </div>
                   </div>
 
                   {/* Navigation Controls */}
-                  <div className="flex items-center gap-2 self-end sm:self-auto font-sora">
+                  <div className="flex items-center gap-2 self-end sm:self-auto font-sans">
                     <button
                       onClick={prevSlide}
-                      className="p-3 rounded-full border border-[#eadcc8] text-[#2d2119] hover:bg-[#eadcc8]/40 transition-colors shadow-sm cursor-pointer"
+                      className="p-3 rounded-full border border-[#EAE5DC] text-[#1A1715] bg-[#FAF8F5] hover:border-[#8A6738] transition-colors shadow-sm cursor-pointer"
                       aria-label="Previous review"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
-                    <span className="text-xs font-semibold text-[#76665a] px-2">
+                    <span className="text-xs font-semibold text-[#68625A] px-2">
                       {currentIndex + 1} / {verifiedReviews.length}
                     </span>
                     <button
                       onClick={nextSlide}
-                      className="p-3 rounded-full border border-[#eadcc8] text-[#2d2119] hover:bg-[#eadcc8]/40 transition-colors shadow-sm cursor-pointer"
+                      className="p-3 rounded-full border border-[#EAE5DC] text-[#1A1715] bg-[#FAF8F5] hover:border-[#8A6738] transition-colors shadow-sm cursor-pointer"
                       aria-label="Next review"
                     >
                       <ChevronRight className="w-4 h-4" />
@@ -495,19 +495,19 @@ export default function ReviewsSection() {
                   onClick={() => setCurrentIndex(idx)}
                   className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${
                     currentIndex === idx
-                      ? 'bg-white border-[#fb923c] shadow-md ring-1 ring-[#fb923c]'
-                      : 'bg-white/70 border-[#eadcc8] hover:bg-white'
+                      ? 'bg-white border-[#8A6738] shadow-sm'
+                      : 'bg-[#F3EFE8]/70 border-[#EAE5DC] hover:border-[#8A6738]/50'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-serif text-sm font-bold text-[#2d2119]">{review.author}</span>
-                    <div className="flex text-amber-500">
+                    <span className="font-serif text-sm font-bold text-[#1A1715]">{review.author}</span>
+                    <div className="flex text-[#8A6738]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-500" />
+                        <Star key={i} className="w-3 h-3 fill-[#8A6738] text-[#8A6738]" />
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-[#76665a] line-clamp-2 italic">
+                  <p className="text-xs text-[#68625A] line-clamp-2 italic">
                     "{review.text}"
                   </p>
                 </div>
@@ -522,22 +522,22 @@ export default function ReviewsSection() {
           INSTAGRAM REEL VIDEO MODAL - DIRECT EMBED OF REAL INSTAGRAM REEL
          ========================================================================= */}
       {activeReelModal && (
-        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
           <div 
             className="fixed inset-0" 
             onClick={() => setActiveReelModal(null)} 
           />
 
-          <div className="relative w-full max-w-md bg-[#2d2119] rounded-3xl overflow-hidden border border-[#fb923c]/40 shadow-2xl z-10 max-h-[90vh] flex flex-col">
+          <div className="relative w-full max-w-md bg-white rounded-3xl overflow-hidden border border-[#EAE5DC] shadow-2xl z-10 max-h-[90vh] flex flex-col">
             {/* Header */}
-            <div className="p-4 border-b border-white/10 flex items-center justify-between bg-black/40">
-              <div className="flex items-center gap-2 text-white">
-                <InstagramIcon className="w-4 h-4 text-[#fb923c]" />
+            <div className="p-4 border-b border-[#EAE5DC] flex items-center justify-between bg-[#FAF8F5]">
+              <div className="flex items-center gap-2 text-[#1A1715]">
+                <InstagramIcon className="w-4 h-4 text-[#8A6738]" />
                 <span className="font-serif text-sm font-bold line-clamp-1">{activeReelModal.title}</span>
               </div>
               <button
                 onClick={() => setActiveReelModal(null)}
-                className="px-2.5 py-1 rounded-full bg-white/20 text-white text-xs font-bold hover:bg-white/30 transition-colors"
+                className="px-2.5 py-1 rounded-full bg-white text-[#1A1715] border border-[#EAE5DC] text-xs font-bold hover:border-[#8A6738] transition-colors"
               >
                 ✕ Close
               </button>
@@ -556,13 +556,13 @@ export default function ReviewsSection() {
             </div>
 
             {/* Footer Action */}
-            <div className="p-4 bg-black/60 border-t border-white/10 flex items-center justify-between">
-              <span className="text-[11px] text-[#eadcc8] font-sora">{activeReelModal.views} Views • {activeReelModal.likes} Likes</span>
+            <div className="p-4 bg-[#FAF8F5] border-t border-[#EAE5DC] flex items-center justify-between">
+              <span className="text-[11px] text-[#68625A] font-sans">{activeReelModal.views} Views • {activeReelModal.likes} Likes</span>
               <a
                 href={activeReelModal.reelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-[#fb923c] text-[#2d2119] text-xs font-bold font-sora flex items-center gap-1.5 hover:bg-[#fdba74] transition-all"
+                className="px-4 py-2 rounded-full bg-[#1A1715] text-white border border-[#1A1715] text-xs font-bold font-sans flex items-center gap-1.5 hover:bg-[#8A6738] hover:border-[#8A6738] transition-all"
               >
                 <span>Open in Instagram App</span>
                 <ExternalLink className="w-3.5 h-3.5" />

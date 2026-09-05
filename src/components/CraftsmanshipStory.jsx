@@ -26,7 +26,7 @@ export default function CraftsmanshipStory({ onContactClick }) {
   ];
 
   return (
-    <section className="py-20 md:py-28 overflow-hidden bg-warm-ivory">
+    <section className="py-20 md:py-28 overflow-hidden bg-white border-t border-[#EAE5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -34,29 +34,29 @@ export default function CraftsmanshipStory({ onContactClick }) {
           {/* Left Large Editorial Image Frame */}
           <div className="lg:col-span-6 relative">
             
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-dark-brown img-zoom-container">
+            <div className="relative rounded-3xl overflow-hidden shadow-sm border border-[#EAE5DC] aspect-[4/5] bg-[#F3EFE8] img-zoom-container">
               <img
                 src="/images/manduva-craft-detail.jpg"
                 alt="Handcrafted Indian Wood Joinery Detail Manduva Logillu Hyderabad"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-brown/80 via-dark-brown/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1715]/85 via-[#1A1715]/25 to-transparent" />
               
               <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-                <span className="text-[10px] uppercase tracking-widest text-light-peach font-bold">
+                <span className="text-[10px] uppercase tracking-widest text-[#C49A6C] font-semibold">
                   Artisan Precision
                 </span>
-                <p className="font-serif text-lg text-warm-ivory font-light">
+                <p className="font-serif text-lg text-[#FAF8F5] font-light">
                   "No two wood grains are alike. We allow the timber's natural knots and flow to dictate the sculpture."
                 </p>
               </div>
             </div>
 
             {/* Overlaid Floating Badge */}
-            <div className="absolute -top-6 -right-4 sm:-top-8 sm:-right-8 bg-dark-brown text-warm-ivory p-5 rounded-2xl shadow-xl border border-brand-peach/30 max-w-[200px] sm:max-w-[240px]">
-              <div className="font-serif text-3xl font-bold text-light-peach">100%</div>
-              <div className="text-xs font-medium text-warm-beige mt-0.5">Solid Aged Timber Guarantee</div>
+            <div className="absolute -top-6 -right-4 sm:-top-8 sm:-right-8 bg-white text-[#1A1715] p-5 rounded-2xl shadow-md border border-[#EAE5DC] max-w-[200px] sm:max-w-[240px]">
+              <div className="font-serif text-3xl font-bold text-[#8A6738]">100%</div>
+              <div className="text-xs font-medium text-[#68625A] mt-0.5">Solid Aged Timber Guarantee</div>
             </div>
 
           </div>
@@ -64,15 +64,15 @@ export default function CraftsmanshipStory({ onContactClick }) {
           {/* Right Narrative & Pillars */}
           <div className="lg:col-span-6 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 text-deep-orange text-xs font-semibold tracking-widest uppercase">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 text-[#8A6738] text-xs font-semibold tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
                 <span>HEIRLOOM INTEGRITY</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-dark-brown leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715] leading-tight">
                 Crafted for <br />
-                <span className="italic font-light text-deep-orange">Generations to Come</span>
+                <span className="italic font-light text-[#8A6738]">Generations to Come</span>
               </h2>
-              <p className="text-muted-brown text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#68625A] text-sm sm:text-base font-light leading-relaxed">
                 In an era dominated by flat-pack disposable furniture, Manduva Logillu represents an uncompromising return to permanence. We believe furniture should carry memories, age with dignity, and be passed down as treasured heirlooms.
               </p>
             </div>
@@ -82,14 +82,14 @@ export default function CraftsmanshipStory({ onContactClick }) {
               {pillars.map((p, idx) => {
                 const Icon = p.icon;
                 return (
-                  <div key={idx} className="space-y-2 p-4 rounded-2xl bg-white/70 border border-warm-beige/60 hover:bg-white transition-colors">
-                    <div className="w-9 h-9 rounded-xl bg-warm-beige/50 text-deep-orange flex items-center justify-center shrink-0">
+                  <div key={idx} className="space-y-2 p-4 rounded-2xl bg-[#F3EFE8]/70 border border-[#EAE5DC] hover:border-[#8A6738]/60 transition-colors">
+                    <div className="w-9 h-9 rounded-xl bg-white text-[#8A6738] flex items-center justify-center shrink-0 border border-[#EAE5DC] shadow-xs">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-serif text-base sm:text-lg font-bold text-dark-brown">
+                    <h3 className="font-serif text-base sm:text-lg font-semibold text-[#1A1715]">
                       {p.title}
                     </h3>
-                    <p className="text-xs text-muted-brown font-light leading-relaxed">
+                    <p className="text-xs text-[#68625A] font-light leading-relaxed">
                       {p.desc}
                     </p>
                   </div>
@@ -100,7 +100,7 @@ export default function CraftsmanshipStory({ onContactClick }) {
             <div className="pt-2">
               <button
                 onClick={onContactClick}
-                className="px-8 py-3.5 rounded-full bg-dark-brown text-warm-ivory text-xs sm:text-sm font-semibold tracking-wider hover:bg-charcoal-brown shadow-lux transition-all"
+                className="px-8 py-3.5 rounded-full bg-[#1A1715] text-[#FAF8F5] hover:bg-[#332D28] text-xs sm:text-sm font-semibold tracking-wider transition-colors shadow-xs"
               >
                 Discuss Custom Craftsmanship
               </button>

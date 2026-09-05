@@ -90,27 +90,27 @@ export default function AdminDrawer({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-dark-brown/75 backdrop-blur-sm flex justify-end">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-end">
       {/* Overlay click */}
       <div className="fixed inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-2xl bg-white h-full shadow-2xl flex flex-col justify-between z-10 overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-white border-l border-[#EAE5DC] text-[#1A1715] h-full shadow-2xl flex flex-col justify-between z-10 overflow-y-auto">
         
         <div>
           {/* Header */}
-          <div className="p-6 border-b border-warm-beige bg-warm-ivory flex items-center justify-between">
+          <div className="p-6 border-b border-[#EAE5DC] bg-[#FAF8F5] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-xl bg-dark-brown text-light-peach">
+              <div className="p-2 rounded-xl bg-white text-[#8A6738] border border-[#EAE5DC] shadow-xs">
                 <Sliders className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-dark-brown">Showroom CMS & Catalog Admin</h3>
-                <span className="text-xs text-muted-brown">Live updates instantly reflect on the website</span>
+                <h3 className="font-serif text-xl font-bold text-[#1A1715]">Showroom CMS & Catalog Admin</h3>
+                <span className="text-xs text-[#68625A]">Live updates instantly reflect on the website</span>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-warm-beige text-dark-brown"
+              className="p-2 rounded-full hover:bg-[#F3EFE8] text-[#1A1715]"
               aria-label="Close admin"
             >
               <X className="w-5 h-5" />
@@ -118,23 +118,23 @@ export default function AdminDrawer({
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex border-b border-warm-beige bg-soft-cream px-6">
+          <div className="flex border-b border-[#EAE5DC] bg-white px-6 font-sans">
             <button
               onClick={() => setActiveTab('products')}
-              className={`py-3 px-4 font-serif text-sm font-semibold border-b-2 transition-all ${
+              className={`py-3 px-4 text-xs uppercase tracking-wider font-semibold border-b-2 transition-all ${
                 activeTab === 'products'
-                  ? 'border-deep-orange text-deep-orange'
-                  : 'border-transparent text-muted-brown hover:text-dark-brown'
+                  ? 'border-[#8A6738] text-[#8A6738]'
+                  : 'border-transparent text-[#68625A] hover:text-[#1A1715]'
               }`}
             >
               Furniture Catalog ({products.length})
             </button>
             <button
               onClick={() => setActiveTab('store')}
-              className={`py-3 px-4 font-serif text-sm font-semibold border-b-2 transition-all ${
+              className={`py-3 px-4 text-xs uppercase tracking-wider font-semibold border-b-2 transition-all ${
                 activeTab === 'store'
-                  ? 'border-deep-orange text-deep-orange'
-                  : 'border-transparent text-muted-brown hover:text-dark-brown'
+                  ? 'border-[#8A6738] text-[#8A6738]'
+                  : 'border-transparent text-[#68625A] hover:text-[#1A1715]'
               }`}
             >
               Store Info & WhatsApp
@@ -143,8 +143,8 @@ export default function AdminDrawer({
 
           {/* Feedback banner */}
           {savedSuccess && (
-            <div className="m-6 p-3 rounded-xl bg-emerald-100 text-emerald-800 text-xs font-semibold flex items-center gap-2">
-              <CheckCircle className="w-4 h-4" />
+            <div className="m-6 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-emerald-600" />
               <span>Changes saved successfully to browser storage!</span>
             </div>
           )}
@@ -156,91 +156,91 @@ export default function AdminDrawer({
               <div className="space-y-6">
                 
                 {/* Form to Add / Edit */}
-                <form onSubmit={handleSaveProduct} className="p-5 rounded-2xl bg-warm-ivory border border-warm-beige space-y-4">
-                  <h4 className="font-serif text-base font-bold text-dark-brown flex items-center justify-between">
+                <form onSubmit={handleSaveProduct} className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] space-y-4">
+                  <h4 className="font-serif text-base font-bold text-[#1A1715] flex items-center justify-between">
                     <span>{editingProduct ? 'Edit Furniture Piece' : 'Add New Furniture Item'}</span>
                     {editingProduct && (
                       <button
                         type="button"
                         onClick={() => setEditingProduct(null)}
-                        className="text-xs text-muted-brown underline"
+                        className="text-xs text-[#8A6738] underline hover:text-[#1A1715]"
                       >
                         Cancel Edit
                       </button>
                     )}
                   </h4>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-sans">
                     <div>
-                      <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Piece Name</label>
+                      <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Piece Name</label>
                       <input
                         type="text"
                         value={productForm.name}
                         onChange={(e) => setProductForm({ ...productForm, name: e.target.value })}
                         placeholder="e.g. Royal Chettinad Diwan"
-                        className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown"
+                        className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                         required
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Category</label>
+                      <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Category</label>
                       <input
                         type="text"
                         value={productForm.category}
                         onChange={(e) => setProductForm({ ...productForm, category: e.target.value })}
-                        className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown"
+                        className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-sans">
                     <div>
-                      <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Price Text</label>
+                      <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Price Text</label>
                       <input
                         type="text"
                         value={productForm.price}
                         onChange={(e) => setProductForm({ ...productForm, price: e.target.value })}
-                        className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown"
+                        className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Room / Placement</label>
+                      <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Room / Placement</label>
                       <input
                         type="text"
                         value={productForm.room}
                         onChange={(e) => setProductForm({ ...productForm, room: e.target.value })}
-                        className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown"
+                        className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                       />
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Materials</label>
+                  <div className="font-sans">
+                    <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Materials</label>
                     <input
                       type="text"
                       value={productForm.materials}
                       onChange={(e) => setProductForm({ ...productForm, materials: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown"
+                      className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-[11px] font-bold text-dark-brown uppercase mb-1">Short Description</label>
+                  <div className="font-sans">
+                    <label className="block text-[11px] font-bold text-[#1A1715] uppercase mb-1">Short Description</label>
                     <textarea
                       rows={2}
                       value={productForm.shortDescription}
                       onChange={(e) => setProductForm({ ...productForm, shortDescription: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs text-dark-brown resize-none"
+                      className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738] resize-none"
                     />
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <label className="flex items-center gap-2 text-xs font-semibold text-dark-brown cursor-pointer">
+                  <div className="flex items-center gap-3 font-sans">
+                    <label className="flex items-center gap-2 text-xs font-semibold text-[#1A1715] cursor-pointer">
                       <input
                         type="checkbox"
                         checked={productForm.featured}
                         onChange={(e) => setProductForm({ ...productForm, featured: e.target.checked })}
-                        className="rounded text-deep-orange"
+                        className="rounded accent-[#8A6738]"
                       />
                       <span>Feature in Showcase</span>
                     </label>
@@ -248,36 +248,36 @@ export default function AdminDrawer({
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 rounded-xl bg-dark-brown text-warm-ivory text-xs font-semibold hover:bg-charcoal-brown flex items-center justify-center gap-2"
+                    className="w-full py-2.5 rounded-xl bg-[#1A1715] text-white hover:bg-[#8A6738] text-xs font-semibold flex items-center justify-center gap-2 transition-colors font-sans"
                   >
-                    <Save className="w-4 h-4 text-light-peach" />
+                    <Save className="w-4 h-4 text-[#FAF8F5]" />
                     <span>{editingProduct ? 'Update Piece' : 'Add Piece to Catalog'}</span>
                   </button>
                 </form>
 
                 {/* Existing Products List */}
                 <div className="space-y-3">
-                  <span className="text-xs font-bold text-muted-brown uppercase tracking-wider block">
+                  <span className="text-xs font-bold text-[#68625A] uppercase tracking-wider block font-sans">
                     Catalog Items ({products.length})
                   </span>
                   {products.map(prod => (
-                    <div key={prod.id} className="p-3 rounded-xl border border-warm-beige flex items-center justify-between gap-3 bg-white hover:bg-soft-cream/40">
-                      <img src={prod.images[0]} alt={prod.name} className="w-12 h-12 rounded-lg object-cover" />
+                    <div key={prod.id} className="p-3 rounded-xl border border-[#EAE5DC] flex items-center justify-between gap-3 bg-white hover:border-[#8A6738]/50 shadow-xs">
+                      <img src={prod.images[0]} alt={prod.name} className="w-12 h-12 rounded-lg object-cover border border-[#EAE5DC]" />
                       <div className="flex-grow min-w-0">
-                        <h5 className="font-serif text-sm font-semibold text-dark-brown truncate">{prod.name}</h5>
-                        <div className="text-[11px] text-muted-brown">{prod.category} • {prod.price}</div>
+                        <h5 className="font-serif text-sm font-semibold text-[#1A1715] truncate">{prod.name}</h5>
+                        <div className="text-[11px] text-[#68625A]">{prod.category} • {prod.price}</div>
                       </div>
                       <div className="flex items-center gap-1 shrink-0">
                         <button
                           onClick={() => handleEditProductClick(prod)}
-                          className="p-1.5 rounded-lg text-charcoal-brown hover:bg-warm-beige"
+                          className="p-1.5 rounded-lg text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8]"
                           title="Edit"
                         >
                           <Edit3 className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => handleDeleteProduct(prod.id)}
-                          className="p-1.5 rounded-lg text-red-600 hover:bg-red-50"
+                          className="p-1.5 rounded-lg text-red-500 hover:bg-red-50"
                           title="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -291,52 +291,52 @@ export default function AdminDrawer({
             )}
 
             {activeTab === 'store' && (
-              <form onSubmit={handleSaveConfig} className="space-y-4">
+              <form onSubmit={handleSaveConfig} className="space-y-4 font-sans">
                 <div>
-                  <label className="block text-xs font-bold text-dark-brown uppercase mb-1">Brand Name</label>
+                  <label className="block text-xs font-bold text-[#1A1715] uppercase mb-1">Brand Name</label>
                   <input
                     type="text"
                     value={configForm.brandName}
                     onChange={(e) => setConfigForm({ ...configForm, brandName: e.target.value })}
-                    className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs"
+                    className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-dark-brown uppercase mb-1">WhatsApp Number (Digits with country code)</label>
+                  <label className="block text-xs font-bold text-[#1A1715] uppercase mb-1">WhatsApp Number (Digits with country code)</label>
                   <input
                     type="text"
                     value={configForm.whatsappNumber}
                     onChange={(e) => setConfigForm({ ...configForm, whatsappNumber: e.target.value })}
-                    className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs"
+                    className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-dark-brown uppercase mb-1">Showroom Phone Display</label>
+                  <label className="block text-xs font-bold text-[#1A1715] uppercase mb-1">Showroom Phone Display</label>
                   <input
                     type="text"
                     value={configForm.displayPhone}
                     onChange={(e) => setConfigForm({ ...configForm, displayPhone: e.target.value, phoneNumber: e.target.value })}
-                    className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs"
+                    className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-dark-brown uppercase mb-1">Full Store Address</label>
+                  <label className="block text-xs font-bold text-[#1A1715] uppercase mb-1">Full Store Address</label>
                   <textarea
                     rows={2}
                     value={configForm.fullAddress}
                     onChange={(e) => setConfigForm({ ...configForm, fullAddress: e.target.value })}
-                    className="w-full px-3 py-2 rounded-lg border border-warm-beige text-xs resize-none"
+                    className="w-full px-3 py-2 rounded-lg border border-[#EAE5DC] bg-white text-xs text-[#1A1715] focus:outline-none focus:border-[#8A6738] resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-dark-brown text-warm-ivory text-xs font-semibold hover:bg-charcoal-brown flex items-center justify-center gap-2"
+                  className="w-full py-3 rounded-xl bg-[#1A1715] text-white hover:bg-[#8A6738] text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Save className="w-4 h-4 text-light-peach" />
+                  <Save className="w-4 h-4 text-[#FAF8F5]" />
                   <span>Save Store Configuration</span>
                 </button>
               </form>
@@ -346,17 +346,17 @@ export default function AdminDrawer({
         </div>
 
         {/* Footer */}
-        <div className="p-6 border-t border-warm-beige bg-warm-ivory flex items-center justify-between">
+        <div className="p-6 border-t border-[#EAE5DC] bg-[#FAF8F5] flex items-center justify-between">
           <button
             onClick={resetToDefaults}
-            className="text-xs text-red-600 hover:underline flex items-center gap-1"
+            className="text-xs text-red-500 hover:underline flex items-center gap-1 font-sans"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset to Original Store Defaults</span>
           </button>
           <button
             onClick={onClose}
-            className="px-4 py-2 rounded-xl bg-warm-beige text-dark-brown text-xs font-semibold"
+            className="px-4 py-2 rounded-xl bg-[#1A1715] text-white hover:bg-[#8A6738] text-xs font-semibold transition-colors font-sans"
           >
             Done
           </button>

@@ -64,50 +64,50 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-warm-ivory border-t border-warm-beige/60" id="enquiry-section">
+    <section className="py-20 md:py-28 bg-[#FAF8F5] border-t border-[#EAE5DC]" id="enquiry-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Editorial Prompt */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-warm-beige/60 text-dark-brown text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-deep-orange" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#EAE5DC] text-[#68625A] text-xs font-semibold tracking-widest uppercase shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
               <span>BESPOKE CONSULTATION</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-dark-brown leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715] leading-tight">
               Find the Piece <br />
-              <span className="italic font-light text-deep-orange">for Your Space</span>
+              <span className="italic font-light text-[#8A6738]">for Your Space</span>
             </h2>
 
-            <p className="text-muted-brown text-sm sm:text-base font-light leading-relaxed">
+            <p className="text-[#68625A] text-sm sm:text-base font-light leading-relaxed">
               Whether you are seeking an authentic antique focal point, furnishing a heritage villa in Hyderabad, or requiring custom-sized teakwood woodwork, our design consultants are at your service.
             </p>
 
-            <div className="space-y-4 pt-4 border-t border-warm-beige/60">
-              <div className="flex items-center gap-3 text-xs sm:text-sm text-charcoal-brown">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+            <div className="space-y-4 pt-4 border-t border-[#EAE5DC]">
+              <div className="flex items-center gap-3 text-xs sm:text-sm text-[#1A1715]">
+                <div className="w-8 h-8 rounded-full bg-[#1B5E43]/10 border border-[#1B5E43]/30 text-[#1B5E43] flex items-center justify-center shrink-0">
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="font-semibold block text-dark-brown">Prefer Instant WhatsApp?</span>
+                  <span className="font-semibold block text-[#1A1715]">Prefer Instant WhatsApp?</span>
                   <button
                     onClick={() => openWhatsApp({ intent: 'general' })}
-                    className="text-emerald-700 font-bold hover:underline"
+                    className="text-[#1B5E43] font-bold hover:underline"
                   >
                     Start chat with Showroom Specialist →
                   </button>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 text-xs sm:text-sm text-charcoal-brown">
-                <div className="w-8 h-8 rounded-full bg-warm-beige text-dark-brown flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 text-deep-orange" />
+              <div className="flex items-center gap-3 text-xs sm:text-sm text-[#1A1715]">
+                <div className="w-8 h-8 rounded-full bg-[#FAF8F5] border border-[#EAE5DC] text-[#8A6738] flex items-center justify-center shrink-0 shadow-xs">
+                  <Phone className="w-4 h-4 text-[#8A6738]" />
                 </div>
                 <div>
-                  <span className="font-semibold block text-dark-brown">Direct Showroom Helpline</span>
-                  <a href={`tel:${storeConfig.phoneNumber}`} className="text-dark-brown font-bold hover:underline">
+                  <span className="font-semibold block text-[#1A1715]">Direct Showroom Helpline</span>
+                  <a href={`tel:${storeConfig.phoneNumber}`} className="text-[#8A6738] font-bold hover:underline">
                     {storeConfig.displayPhone}
                   </a>
                 </div>
@@ -117,26 +117,26 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
           </div>
 
           {/* Right Interactive Form Box */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-warm-beige shadow-lux">
+          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-[#EAE5DC] shadow-sm">
             
             {submitted ? (
               <div className="text-center py-10 space-y-5">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-[#1B5E43]/10 border border-[#1B5E43]/30 text-[#1B5E43] mx-auto flex items-center justify-center shadow-xs">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl text-dark-brown">
+                <h3 className="font-serif text-2xl sm:text-3xl text-[#1A1715]">
                   Thank You, {formData.name}
                 </h3>
-                <p className="text-muted-brown text-sm sm:text-base font-light max-w-md mx-auto">
+                <p className="text-[#68625A] text-sm sm:text-base font-light max-w-md mx-auto">
                   Your enquiry for <strong>{formData.interest}</strong> has been received. Our Hyderabad showroom specialist will connect with you shortly.
                 </p>
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
                     onClick={handleForwardWhatsApp}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-700 text-white text-xs font-semibold hover:bg-emerald-800 flex items-center justify-center gap-2 shadow"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#1B5E43] text-white text-xs font-semibold hover:bg-[#154b35] flex items-center justify-center gap-2 shadow-xs transition-colors"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <MessageSquare className="w-4 h-4 fill-current" />
                     <span>Send directly via WhatsApp</span>
                   </button>
                   <button
@@ -144,7 +144,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                       setSubmitted(false);
                       setFormData({ name: '', phone: '', email: '', interest: interestOptions[0], message: '' });
                     }}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl border border-warm-beige text-dark-brown text-xs font-semibold hover:bg-warm-beige/40"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] text-[#1A1715] text-xs font-semibold hover:bg-[#EAE5DC] transition-colors"
                   >
                     Send Another Enquiry
                   </button>
@@ -156,7 +156,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                   
                   {/* Name */}
                   <div>
-                    <label className="block text-xs font-bold text-dark-brown uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-[#1A1715] uppercase tracking-wider mb-2">
                       Full Name *
                     </label>
                     <input
@@ -165,11 +165,11 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.name ? 'border-red-500 bg-red-50/20' : 'border-warm-beige'
-                      } text-dark-brown text-sm focus:outline-none focus:border-dark-brown transition-colors`}
+                        errors.name ? 'border-red-500 bg-red-50' : 'border-[#EAE5DC]'
+                      } bg-[#FAF8F5] text-[#1A1715] placeholder-[#8E867D] text-sm focus:outline-none focus:border-[#8A6738] transition-colors`}
                     />
                     {errors.name && (
-                      <div className="flex items-center gap-1 text-[11px] text-red-500 mt-1">
+                      <div className="flex items-center gap-1 text-[11px] text-red-600 mt-1">
                         <AlertCircle className="w-3 h-3" />
                         <span>{errors.name}</span>
                       </div>
@@ -178,7 +178,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-xs font-bold text-dark-brown uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-[#1A1715] uppercase tracking-wider mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -187,11 +187,11 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.phone ? 'border-red-500 bg-red-50/20' : 'border-warm-beige'
-                      } text-dark-brown text-sm focus:outline-none focus:border-dark-brown transition-colors`}
+                        errors.phone ? 'border-red-500 bg-red-50' : 'border-[#EAE5DC]'
+                      } bg-[#FAF8F5] text-[#1A1715] placeholder-[#8E867D] text-sm focus:outline-none focus:border-[#8A6738] transition-colors`}
                     />
                     {errors.phone && (
-                      <div className="flex items-center gap-1 text-[11px] text-red-500 mt-1">
+                      <div className="flex items-center gap-1 text-[11px] text-red-600 mt-1">
                         <AlertCircle className="w-3 h-3" />
                         <span>{errors.phone}</span>
                       </div>
@@ -203,7 +203,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                 {/* Email & Interest */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-dark-brown uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-[#1A1715] uppercase tracking-wider mb-2">
                       Email Address *
                     </label>
                     <input
@@ -212,11 +212,11 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.email ? 'border-red-500 bg-red-50/20' : 'border-warm-beige'
-                      } text-dark-brown text-sm focus:outline-none focus:border-dark-brown transition-colors`}
+                        errors.email ? 'border-red-500 bg-red-50' : 'border-[#EAE5DC]'
+                      } bg-[#FAF8F5] text-[#1A1715] placeholder-[#8E867D] text-sm focus:outline-none focus:border-[#8A6738] transition-colors`}
                     />
                     {errors.email && (
-                      <div className="flex items-center gap-1 text-[11px] text-red-500 mt-1">
+                      <div className="flex items-center gap-1 text-[11px] text-red-600 mt-1">
                         <AlertCircle className="w-3 h-3" />
                         <span>{errors.email}</span>
                       </div>
@@ -224,16 +224,16 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-dark-brown uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-[#1A1715] uppercase tracking-wider mb-2">
                       Furniture Interest
                     </label>
                     <select
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-warm-beige text-dark-brown text-sm focus:outline-none focus:border-dark-brown transition-colors bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-[#EAE5DC] text-[#1A1715] text-sm focus:outline-none focus:border-[#8A6738] transition-colors bg-[#FAF8F5]"
                     >
                       {interestOptions.map((opt) => (
-                        <option key={opt} value={opt}>
+                        <option key={opt} value={opt} className="bg-white text-[#1A1715]">
                           {opt}
                         </option>
                       ))}
@@ -243,7 +243,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-bold text-dark-brown uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-[#1A1715] uppercase tracking-wider mb-2">
                     Message / Custom Dimensions (Optional)
                   </label>
                   <textarea
@@ -251,7 +251,7 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                     placeholder="Tell us about your room size, preferred wood finish, or any specific pieces you have in mind..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-warm-beige text-dark-brown text-sm focus:outline-none focus:border-dark-brown transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] text-[#1A1715] placeholder-[#8E867D] text-sm focus:outline-none focus:border-[#8A6738] transition-colors resize-none"
                   />
                 </div>
 
@@ -259,9 +259,9 @@ export default function EnquirySection({ preselectedPiece = "", storeConfig }) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-dark-brown text-warm-ivory text-xs sm:text-sm font-semibold tracking-wider hover:bg-charcoal-brown shadow-lux hover:shadow-lux-hover transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-4 rounded-xl bg-[#1A1715] text-[#FAF8F5] text-xs sm:text-sm font-semibold tracking-wider hover:bg-[#332D28] shadow-xs transition-colors flex items-center justify-center gap-2 group"
                 >
-                  <Send className="w-4 h-4 text-light-peach group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-4 h-4 text-[#C49A6C] group-hover:translate-x-1 transition-transform" />
                   <span>{isSubmitting ? 'Sending Request...' : 'Send Enquiry to Manduva Logillu'}</span>
                 </button>
               </form>

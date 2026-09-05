@@ -47,32 +47,32 @@ export default function FurniturePage({
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warm-beige/60 text-dark-brown text-xs font-semibold tracking-widest uppercase">
-          <Sparkles className="w-3.5 h-3.5 text-deep-orange" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] text-[#8A6738] text-xs font-semibold tracking-widest uppercase font-sans">
+          <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
           <span>FURNITURE CATALOGUE</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-dark-brown leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#1A1715] leading-tight">
           Timeless Furniture Catalog
         </h1>
-        <p className="text-muted-brown text-base sm:text-lg font-light leading-relaxed">
+        <p className="text-[#68625A] text-base sm:text-lg font-light leading-relaxed">
           Explore our complete archive of solid teakwood, antique, vintage, and handcrafted traditional creations.
         </p>
       </div>
 
       {/* Interactive Filter Control Panel */}
-      <div className="p-6 rounded-3xl bg-white border border-warm-beige shadow-lux space-y-5">
+      <div className="p-6 rounded-3xl bg-white border border-[#EAE5DC] shadow-sm space-y-5">
         
         {/* Top search & status row */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
           
           <div className="md:col-span-6 relative">
-            <Search className="w-4 h-4 text-deep-orange absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#8A6738] absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search by furniture name, teakwood, antique, swing, sofa..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-warm-ivory/50 border border-warm-beige text-xs sm:text-sm text-dark-brown focus:outline-none focus:border-dark-brown transition-colors"
+              className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] text-xs sm:text-sm text-[#1A1715] placeholder-[#68625A]/50 focus:outline-none focus:border-[#8A6738] transition-colors"
             />
           </div>
 
@@ -80,11 +80,11 @@ export default function FurniturePage({
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-3 rounded-2xl bg-warm-ivory/50 border border-warm-beige text-xs sm:text-sm text-dark-brown focus:outline-none focus:border-dark-brown transition-colors"
+              className="w-full px-4 py-3 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] text-xs sm:text-sm text-[#1A1715] focus:outline-none focus:border-[#8A6738] transition-colors font-sans"
             >
-              <option value="all">All Categories ({categories.length})</option>
+              <option value="all" className="bg-white text-[#1A1715]">All Categories ({categories.length})</option>
               {categories.map(cat => (
-                <option key={cat.slug} value={cat.slug}>
+                <option key={cat.slug} value={cat.slug} className="bg-white text-[#1A1715]">
                   {cat.name}
                 </option>
               ))}
@@ -95,11 +95,11 @@ export default function FurniturePage({
             <select
               value={selectedRoom}
               onChange={(e) => setSelectedRoom(e.target.value)}
-              className="w-full px-4 py-3 rounded-2xl bg-warm-ivory/50 border border-warm-beige text-xs sm:text-sm text-dark-brown focus:outline-none focus:border-dark-brown transition-colors"
+              className="w-full px-4 py-3 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] text-xs sm:text-sm text-[#1A1715] focus:outline-none focus:border-[#8A6738] transition-colors font-sans"
             >
-              <option value="all">All Placement Rooms</option>
+              <option value="all" className="bg-white text-[#1A1715]">All Placement Rooms</option>
               {rooms.filter(r => r !== 'all').map(r => (
-                <option key={r} value={r}>{r}</option>
+                <option key={r} value={r} className="bg-white text-[#1A1715]">{r}</option>
               ))}
             </select>
           </div>
@@ -107,13 +107,13 @@ export default function FurniturePage({
         </div>
 
         {/* Active filters pill display */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-warm-beige/60 text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-[#EAE5DC] text-xs font-sans">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-muted-brown font-medium">Showing {filteredProducts.length} pieces</span>
+            <span className="text-[#68625A] font-medium">Showing {filteredProducts.length} pieces</span>
             {(selectedCategory !== 'all' || selectedRoom !== 'all' || searchQuery) && (
               <button
                 onClick={handleResetFilters}
-                className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-warm-beige text-dark-brown font-semibold hover:bg-dark-brown hover:text-white transition-colors"
+                className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE5DC] text-[#1A1715] font-semibold hover:border-[#8A6738] transition-colors"
               >
                 <X className="w-3 h-3" />
                 <span>Reset Filters</span>
@@ -121,7 +121,7 @@ export default function FurniturePage({
             )}
           </div>
 
-          <span className="text-muted-brown text-[11px] hidden sm:inline">
+          <span className="text-[#68625A] text-[11px] hidden sm:inline">
             Custom sizing & finishes available upon enquiry
           </span>
         </div>
@@ -130,14 +130,14 @@ export default function FurniturePage({
 
       {/* Product Grid */}
       {filteredProducts.length === 0 ? (
-        <div className="text-center py-20 bg-white rounded-3xl border border-warm-beige shadow-lux space-y-4">
-          <p className="font-serif text-2xl text-dark-brown">No furniture pieces matched your criteria</p>
-          <p className="text-muted-brown text-sm max-w-md mx-auto font-light">
+        <div className="text-center py-20 bg-white rounded-3xl border border-[#EAE5DC] shadow-sm space-y-4">
+          <p className="font-serif text-2xl text-[#1A1715]">No furniture pieces matched your criteria</p>
+          <p className="text-[#68625A] text-sm max-w-md mx-auto font-light">
             We regularly source rare antiques and craft bespoke pieces on demand. Contact our Hyderabad specialists to discuss your custom project.
           </p>
           <button
             onClick={handleResetFilters}
-            className="px-6 py-2.5 rounded-full bg-dark-brown text-warm-ivory text-xs font-semibold"
+            className="px-6 py-2.5 rounded-full bg-[#1A1715] text-white hover:bg-[#8A6738] text-xs font-semibold transition-colors font-sans"
           >
             Clear Filters & View All
           </button>
@@ -147,12 +147,12 @@ export default function FurniturePage({
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="group bg-white rounded-3xl overflow-hidden border border-warm-beige shadow-lux hover:shadow-lux-hover transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between"
+              className="group bg-white rounded-3xl overflow-hidden border border-[#EAE5DC] hover:border-[#8A6738]/60 shadow-sm hover:shadow-md transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between"
             >
               {/* Image Frame */}
               <div 
                 onClick={() => onSelectProduct(product)}
-                className="relative aspect-[4/3] bg-dark-brown overflow-hidden cursor-pointer img-zoom-container"
+                className="relative aspect-[4/3] bg-[#FAF8F5] overflow-hidden cursor-pointer img-zoom-container"
               >
                 <img
                   src={product.images[0]}
@@ -161,25 +161,25 @@ export default function FurniturePage({
                 />
 
                 <div className="absolute top-4 left-4 flex flex-col gap-1">
-                  <span className="px-3 py-1 rounded-full bg-dark-brown/90 text-warm-ivory text-[10px] uppercase font-bold tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#EAE5DC] text-[#1A1715] text-[10px] uppercase font-bold tracking-wider font-sans">
                     {product.category}
                   </span>
                   {product.badge && (
-                    <span className="px-2 py-0.5 rounded-full bg-brand-peach text-dark-brown text-[9px] font-bold uppercase">
+                    <span className="px-2 py-0.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] text-[#8A6738] text-[9px] font-bold uppercase font-sans">
                       {product.badge}
                     </span>
                   )}
                 </div>
 
-                <div className="absolute inset-0 bg-dark-brown/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       onSelectProduct(product);
                     }}
-                    className="px-4 py-2 rounded-full bg-white text-dark-brown text-xs font-semibold shadow-lg flex items-center gap-1.5"
+                    className="px-4 py-2 rounded-full bg-white text-[#1A1715] border border-[#EAE5DC] hover:border-[#8A6738] text-xs font-semibold shadow-lg flex items-center gap-1.5 font-sans"
                   >
-                    <Eye className="w-3.5 h-3.5 text-deep-orange" />
+                    <Eye className="w-3.5 h-3.5 text-[#8A6738]" />
                     Quick View
                   </button>
                 </div>
@@ -188,30 +188,30 @@ export default function FurniturePage({
               {/* Body */}
               <div className="p-6 space-y-4 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-brown font-semibold block">
+                  <span className="text-[10px] uppercase tracking-widest text-[#8A6738] font-bold block font-sans">
                     {product.room}
                   </span>
                   <h3 
                     onClick={() => onSelectProduct(product)}
-                    className="font-serif text-xl text-dark-brown hover:text-deep-orange transition-colors cursor-pointer font-normal"
+                    className="font-serif text-xl text-[#1A1715] hover:text-[#8A6738] transition-colors cursor-pointer font-normal"
                   >
                     {product.name}
                   </h3>
-                  <p className="text-xs text-charcoal-brown/80 line-clamp-2 font-light leading-relaxed">
+                  <p className="text-xs text-[#68625A] line-clamp-2 font-light leading-relaxed">
                     {product.shortDescription}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-warm-beige/70 space-y-3">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-brown">Price on request:</span>
-                    <span className="font-serif text-base font-semibold text-dark-brown">{product.price}</span>
+                <div className="pt-4 border-t border-[#EAE5DC] space-y-3">
+                  <div className="flex items-center justify-between text-xs font-sans">
+                    <span className="text-[#68625A]">Price on request:</span>
+                    <span className="font-serif text-base font-semibold text-[#1A1715]">{product.price}</span>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 font-sans">
                     <button
                       onClick={() => onSelectProduct(product)}
-                      className="py-2.5 px-3 rounded-xl border border-warm-beige text-dark-brown text-xs font-semibold hover:bg-warm-beige/40 text-center"
+                      className="py-2.5 px-3 rounded-xl border border-[#EAE5DC] bg-[#FAF8F5] text-[#1A1715] text-xs font-semibold hover:border-[#8A6738] hover:bg-[#F3EFE8] text-center transition-colors"
                     >
                       View Details
                     </button>
@@ -223,9 +223,9 @@ export default function FurniturePage({
                           intent: 'piece'
                         });
                       }}
-                      className="py-2.5 px-3 rounded-xl bg-dark-brown text-warm-ivory text-xs font-semibold hover:bg-charcoal-brown flex items-center justify-center gap-1.5 shadow-sm"
+                      className="py-2.5 px-3 rounded-xl bg-[#176B57] border border-[#2B806A] text-white text-xs font-semibold hover:bg-[#135746] flex items-center justify-center gap-1.5 shadow-xs transition-colors"
                     >
-                      <MessageSquare className="w-3.5 h-3.5 text-light-peach" />
+                      <MessageSquare className="w-3.5 h-3.5 text-white" />
                       Enquire
                     </button>
                   </div>

@@ -33,34 +33,34 @@ export default function QuickSearchModal({ isOpen, onClose, products, categories
     : [];
 
   return (
-    <div className="fixed inset-0 z-50 bg-dark-brown/70 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-20 sm:pt-28">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-20 sm:pt-28">
       {/* Background click to close */}
       <div className="fixed inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-warm-beige overflow-hidden z-10 flex flex-col max-h-[80vh]">
+      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#EAE5DC] overflow-hidden z-10 flex flex-col max-h-[80vh]">
         
         {/* Search Input Bar */}
-        <div className="flex items-center px-6 py-4 border-b border-warm-beige bg-warm-ivory/50">
-          <Search className="w-5 h-5 text-deep-orange shrink-0 mr-3" />
+        <div className="flex items-center px-6 py-4 border-b border-[#EAE5DC] bg-[#FAF8F5]">
+          <Search className="w-5 h-5 text-[#8A6738] shrink-0 mr-3" />
           <input
             type="text"
             placeholder="Search antique furniture, teak jhula, dining, bedroom, pillars..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoFocus
-            className="w-full bg-transparent text-dark-brown text-base sm:text-lg placeholder:text-muted-brown/60 focus:outline-none"
+            className="w-full bg-transparent text-[#1A1715] text-base sm:text-lg placeholder:text-[#68625A]/50 focus:outline-none"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="p-1 rounded-full text-muted-brown hover:text-dark-brown"
+              className="p-1 rounded-full text-[#68625A] hover:text-[#1A1715]"
             >
               <X className="w-4 h-4" />
             </button>
           )}
           <button
             onClick={onClose}
-            className="ml-3 p-1.5 rounded-full text-charcoal-brown hover:bg-warm-beige/50"
+            className="ml-3 p-1.5 rounded-full text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8]"
           >
             <X className="w-5 h-5" />
           </button>
@@ -72,7 +72,7 @@ export default function QuickSearchModal({ isOpen, onClose, products, categories
           {/* Categories matching if any */}
           {matchingCategories.length > 0 && (
             <div className="space-y-2">
-              <span className="text-[11px] font-bold text-muted-brown uppercase tracking-widest block">
+              <span className="text-[11px] font-bold text-[#68625A] uppercase tracking-widest block font-sans">
                 Collections
               </span>
               <div className="grid grid-cols-2 gap-2">
@@ -83,10 +83,10 @@ export default function QuickSearchModal({ isOpen, onClose, products, categories
                       onClose();
                       onSelectCategory(cat.slug);
                     }}
-                    className="p-3 rounded-xl bg-warm-beige/30 hover:bg-warm-beige/60 text-left flex items-center justify-between transition-colors"
+                    className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE5DC] hover:border-[#8A6738] text-left flex items-center justify-between transition-colors shadow-xs"
                   >
-                    <span className="font-serif text-sm font-semibold text-dark-brown">{cat.name}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-deep-orange" />
+                    <span className="font-serif text-sm font-semibold text-[#1A1715]">{cat.name}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#8A6738]" />
                   </button>
                 ))}
               </div>
@@ -95,12 +95,12 @@ export default function QuickSearchModal({ isOpen, onClose, products, categories
 
           {/* Products List */}
           <div className="space-y-3">
-            <span className="text-[11px] font-bold text-muted-brown uppercase tracking-widest block">
+            <span className="text-[11px] font-bold text-[#68625A] uppercase tracking-widest block font-sans">
               {cleanQuery ? `Furniture Pieces (${matchingProducts.length})` : 'Popular Searches'}
             </span>
 
             {matchingProducts.length === 0 ? (
-              <div className="text-center py-8 text-muted-brown text-sm">
+              <div className="text-center py-8 text-[#68625A] text-sm">
                 No exact match found for "{query}". You can enquire with us for bespoke requests.
               </div>
             ) : (
@@ -112,29 +112,29 @@ export default function QuickSearchModal({ isOpen, onClose, products, categories
                       onClose();
                       onSelectProduct(product);
                     }}
-                    className="flex items-center gap-4 p-3 rounded-2xl hover:bg-warm-ivory cursor-pointer border border-transparent hover:border-warm-beige transition-all group"
+                    className="flex items-center gap-4 p-3 rounded-2xl hover:bg-[#FAF8F5] cursor-pointer border border-transparent hover:border-[#EAE5DC] transition-all group"
                   >
                     <img
                       src={product.images[0]}
                       alt={product.name}
-                      className="w-16 h-16 rounded-xl object-cover shrink-0 border border-warm-beige"
+                      className="w-16 h-16 rounded-xl object-cover shrink-0 border border-[#EAE5DC]"
                     />
                     <div className="flex-grow min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] text-deep-orange font-bold uppercase tracking-wider">
+                        <span className="text-[10px] text-[#8A6738] font-bold uppercase tracking-wider font-sans">
                           {product.category}
                         </span>
-                        <span className="text-muted-brown text-[10px]">•</span>
-                        <span className="text-muted-brown text-[10px]">{product.room}</span>
+                        <span className="text-[#68625A] text-[10px]">•</span>
+                        <span className="text-[#68625A] text-[10px]">{product.room}</span>
                       </div>
-                      <h4 className="font-serif text-base font-semibold text-dark-brown group-hover:text-deep-orange truncate">
+                      <h4 className="font-serif text-base font-semibold text-[#1A1715] group-hover:text-[#8A6738] truncate">
                         {product.name}
                       </h4>
-                      <div className="text-xs text-muted-brown truncate">
+                      <div className="text-xs text-[#68625A] truncate">
                         {product.materials}
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-muted-brown group-hover:text-dark-brown group-hover:translate-x-1 transition-all shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-[#68625A] group-hover:text-[#1A1715] group-hover:translate-x-1 transition-all shrink-0" />
                   </div>
                 ))}
               </div>

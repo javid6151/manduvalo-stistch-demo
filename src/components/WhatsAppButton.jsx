@@ -10,19 +10,19 @@ export default function WhatsAppButton() {
       
       {/* Interactive Tooltip Callout */}
       {showTooltip && (
-        <div className="mb-3 p-4 bg-white rounded-2xl shadow-2xl border border-warm-beige max-w-xs text-xs space-y-2 relative animate-in fade-in slide-in-from-bottom-2">
+        <div className="mb-3 p-4 bg-[#1A1715] text-[#FAF8F5] rounded-2xl shadow-2xl border border-white/10 max-w-xs text-xs space-y-2 relative animate-in fade-in slide-in-from-bottom-2">
           <button
             onClick={() => setShowTooltip(false)}
-            className="absolute top-2 right-2 text-muted-brown hover:text-dark-brown p-1"
+            className="absolute top-2 right-2 text-stone-400 hover:text-white p-1"
             aria-label="Close message"
           >
             <X className="w-3.5 h-3.5" />
           </button>
-          <div className="font-serif text-sm font-bold text-dark-brown flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="font-serif text-sm font-bold text-white flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-[#176B57]" />
             Manduva Logillu Specialist
           </div>
-          <p className="text-charcoal-brown font-light">
+          <p className="text-stone-300 font-light leading-relaxed">
             Looking for authentic antique teakwood or bespoke furniture in Hyderabad? Chat with us directly on WhatsApp.
           </p>
           <button
@@ -30,7 +30,7 @@ export default function WhatsAppButton() {
               setShowTooltip(false);
               openWhatsApp({ intent: 'general' });
             }}
-            className="w-full py-2 bg-emerald-700 text-white rounded-lg font-semibold text-center block text-[11px]"
+            className="w-full py-2 bg-[#176B57] hover:bg-[#135746] text-white rounded-lg font-semibold text-center block text-[11px] transition-colors font-sans"
           >
             Start WhatsApp Chat
           </button>
@@ -41,11 +41,11 @@ export default function WhatsAppButton() {
       <button
         onClick={() => openWhatsApp({ intent: 'general' })}
         onMouseEnter={() => setShowTooltip(true)}
-        className="group flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-white/80 focus:outline-none focus:ring-4 focus:ring-emerald-300"
+        className="group flex items-center gap-2.5 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#176B57] hover:bg-[#135746] text-white shadow-xl transition-all duration-200 border border-[#2B806A]/60 focus:outline-none"
         aria-label="Chat on WhatsApp with Manduva Logillu"
       >
-        <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 fill-white text-emerald-600" />
-        <span className="font-semibold text-xs sm:text-sm tracking-wide hidden sm:inline">
+        <MessageSquare className="w-5 h-5 fill-current" />
+        <span className="font-semibold text-xs sm:text-sm tracking-wide hidden sm:inline text-white font-sans">
           Chat on WhatsApp
         </span>
       </button>

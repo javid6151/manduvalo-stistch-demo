@@ -9,14 +9,14 @@ export default function ContactPage({ storeConfig }) {
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto px-4 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warm-beige/60 text-dark-brown text-xs font-semibold tracking-widest uppercase">
-          <Sparkles className="w-3.5 h-3.5 text-deep-orange" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] text-[#8A6738] text-xs font-semibold tracking-widest uppercase font-sans">
+          <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
           <span>CONNECT & VISIT</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-dark-brown leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#1A1715] leading-tight">
           Contact & Showroom
         </h1>
-        <p className="text-muted-brown text-base sm:text-lg font-light leading-relaxed">
+        <p className="text-[#68625A] text-base sm:text-lg font-light leading-relaxed">
           We invite you to experience our solid teakwood and antique creations in person at our Hyderabad destination.
         </p>
       </div>

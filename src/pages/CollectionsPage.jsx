@@ -7,14 +7,14 @@ export default function CollectionsPage({ categories, onSelectCategory }) {
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warm-beige/60 text-dark-brown text-xs font-semibold tracking-widest uppercase">
-          <Sparkles className="w-3.5 h-3.5 text-deep-orange" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] text-[#8A6738] text-xs font-semibold tracking-widest uppercase font-sans">
+          <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
           <span>CURATED CATEGORIES</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-dark-brown leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-[#1A1715] leading-tight">
           Our Collections
         </h1>
-        <p className="text-muted-brown text-base sm:text-lg font-light leading-relaxed">
+        <p className="text-[#68625A] text-base sm:text-lg font-light leading-relaxed">
           Explore handcrafted furniture across distinct aesthetic disciplines, from preserved antique treasures to majestic teak dining and courtyard suites.
         </p>
       </div>
@@ -25,22 +25,22 @@ export default function CollectionsPage({ categories, onSelectCategory }) {
           <div
             key={cat.id}
             onClick={() => onSelectCategory(cat.slug)}
-            className="group bg-white rounded-3xl overflow-hidden border border-warm-beige shadow-lux hover:shadow-lux-hover cursor-pointer transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between"
+            className="group bg-white rounded-3xl overflow-hidden border border-[#EAE5DC] hover:border-[#8A6738]/60 shadow-sm hover:shadow-md cursor-pointer transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between"
           >
-            <div className="relative aspect-[4/3] bg-dark-brown overflow-hidden img-zoom-container">
+            <div className="relative aspect-[4/3] bg-[#FAF8F5] overflow-hidden img-zoom-container">
               <img
                 src={cat.image}
                 alt={cat.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-brown/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 rounded-full bg-warm-ivory/90 backdrop-blur-md text-dark-brown text-[10px] font-bold uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-white/90 border border-[#EAE5DC] backdrop-blur-md text-[#1A1715] text-[10px] font-bold uppercase tracking-wider font-sans">
                   {cat.count} {typeof cat.count === 'number' ? 'Pieces' : ''}
                 </span>
               </div>
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="text-[11px] uppercase tracking-widest text-light-peach font-semibold block mb-0.5">
+                <span className="text-[11px] uppercase tracking-widest text-[#D4AF37] font-bold block mb-0.5 font-sans">
                   {cat.tagline}
                 </span>
                 <h3 className="font-serif text-2xl font-normal text-white">
@@ -50,13 +50,13 @@ export default function CollectionsPage({ categories, onSelectCategory }) {
             </div>
 
             <div className="p-6 space-y-4 flex-grow flex flex-col justify-between">
-              <p className="text-xs sm:text-sm text-charcoal-brown/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#68625A] font-light leading-relaxed">
                 {cat.description}
               </p>
 
-              <div className="pt-3 border-t border-warm-beige flex items-center justify-between text-xs font-semibold text-dark-brown group-hover:text-deep-orange">
+              <div className="pt-3 border-t border-[#EAE5DC] flex items-center justify-between text-xs font-semibold text-[#1A1715] group-hover:text-[#8A6738] font-sans">
                 <span>Browse {cat.name}</span>
-                <ArrowUpRight className="w-4 h-4 text-deep-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 text-[#8A6738] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
             </div>
           </div>

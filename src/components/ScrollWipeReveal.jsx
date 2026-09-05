@@ -34,7 +34,7 @@ export default function ScrollWipeReveal() {
             start: 'top top',
             end: '+=75%',
             pin: true,
-            scrub: 0.35,
+            scrub: 1,
             anticipatePin: 1,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
@@ -81,25 +81,25 @@ export default function ScrollWipeReveal() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#faf8f2] overflow-hidden select-none isolate flex items-center justify-center"
+      className="relative w-full h-screen bg-[#141210] overflow-hidden select-none isolate flex items-center justify-center"
       id="statement-wipe-stage"
     >
       {/* =========================================================================
-          LAYER 1: Pale Ground with Architectural Context
+          LAYER 1: Deep Ground with Architectural Context
          ========================================================================= */}
-      <div className="absolute inset-0 bg-[#faf8f2] flex flex-col justify-between p-6 sm:p-10 lg:p-16 pointer-events-none">
-        <div className="flex justify-between items-start text-xs font-sora tracking-[0.2em] text-[#76665a] uppercase font-semibold">
+      <div className="absolute inset-0 bg-[#141210] flex flex-col justify-between p-6 sm:p-10 lg:p-16 pointer-events-none">
+        <div className="flex justify-between items-start text-xs font-sans tracking-[0.2em] text-[#9C948A] uppercase font-semibold">
           <span>// ARCHITECTURAL FOLD 02</span>
           <span>HYDERABAD HEIRLOOM ARCHIVE</span>
         </div>
         <div className="text-center space-y-2 opacity-40">
-          <span className="font-serif text-2xl sm:text-4xl text-[#2d2119] italic">
+          <span className="font-serif text-2xl sm:text-4xl text-white/90 italic">
             Manduva Courtyard Heritage
           </span>
         </div>
-        <div className="flex justify-between items-end text-xs font-sora tracking-[0.2em] text-[#76665a] uppercase font-semibold">
+        <div className="flex justify-between items-end text-xs font-sans tracking-[0.2em] text-[#9C948A] uppercase font-semibold">
           <span>EST. TELANGANA • SOUTH INDIA</span>
-          <span className="flex items-center gap-1.5 text-[#f97316]">
+          <span className="flex items-center gap-1.5 text-[#C49B66]">
             <span>SCROLL TO UNVEIL</span>
             <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
           </span>
@@ -123,7 +123,7 @@ export default function ScrollWipeReveal() {
           loading="eager"
         />
         {/* Warm Vignette Overlay with gentle bottom blend into next section */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2d2119]/80 via-transparent to-[#2d2119]/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/80 via-transparent to-[#141210]/30 pointer-events-none" />
       </div>
 
       {/* =========================================================================
@@ -134,21 +134,21 @@ export default function ScrollWipeReveal() {
         className="absolute inset-0 flex items-center justify-center p-6 text-center pointer-events-none z-20 mix-blend-difference"
       >
         <div className="max-w-5xl mx-auto space-y-4">
-          <h2 className="font-syne text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-[0.95] text-white">
+          <h2 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight leading-[0.95] text-white">
             CRAFTED TO <br />
             <span className="italic font-light">OUTLIVE TIME</span>
           </h2>
-          <p className="font-sora text-xs sm:text-sm md:text-base uppercase tracking-[0.35em] sm:tracking-[0.45em] font-medium text-white/90">
+          <p className="font-sans text-xs sm:text-sm md:text-base uppercase tracking-[0.35em] sm:tracking-[0.45em] font-medium text-white/90">
             Dense Teakwood • Generational Joinery • Hyderabad
           </p>
         </div>
       </div>
 
       {/* Top-Right Progress Badge */}
-      <div className="absolute top-8 right-6 sm:top-12 sm:right-12 z-30 pointer-events-none text-right font-sora text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
+      <div className="absolute top-8 right-6 sm:top-12 sm:right-12 z-30 pointer-events-none text-right font-sans text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
         <span 
           ref={progressBadgeRef}
-          className="px-3.5 py-1.5 rounded-full bg-[#2d2119]/90 backdrop-blur-md text-[#fb923c] border border-[#fb923c]/30 shadow-md"
+          className="px-3.5 py-1.5 rounded-full bg-[#1A1715]/90 text-[#C49B66] border border-white/20 shadow-md"
         >
           SCROLL REVEAL // 0%
         </span>

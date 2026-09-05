@@ -66,7 +66,7 @@ export default function FeaturedProducts({
             trigger: section,
             pin: true,
             pinSpacing: true,
-            scrub: 0.45,
+            scrub: 1,
             start: 'top top',
             end: () => `+=${Math.abs(totalScroll) * 0.85}px`,
             anticipatePin: 1,
@@ -100,7 +100,7 @@ export default function FeaturedProducts({
   return (
     <section 
       ref={sectionRef} 
-      className="relative w-full h-screen bg-[#faf8f2] border-t border-[#eadcc8] overflow-hidden select-none isolate"
+      className="relative w-full h-screen bg-[#FAF8F5] border-t border-[#EAE5DC] overflow-hidden select-none isolate"
       id="featured-showcase-pinned"
     >
       {/* Pinned Stage Container */}
@@ -112,17 +112,17 @@ export default function FeaturedProducts({
         {/* =========================================================================
             HEADER BAR: Section Title & Filter Tabs
            ========================================================================= */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 pb-3 border-b border-[#eadcc8]/60 shrink-0">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 pb-3 border-b border-[#EAE5DC] shrink-0">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eadcc8]/60 text-[#2d2119] text-xs font-semibold tracking-widest uppercase font-sora mb-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#f97316]" />
-              <span>EXEMPLARY SHOWCASE</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#68625A] border border-[#EAE5DC] text-xs font-semibold tracking-wider uppercase mb-1.5 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
+              <span>CURATED MASTERPIECES</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#2d2119]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#1A1715]">
               Pieces Worth Keeping
             </h2>
-            <p className="text-[#76665a] text-xs font-light mt-0.5 hidden sm:block">
-              Scroll to explore dense seasoned teakwood creations, swing jhulas, and restored antiques.
+            <p className="text-[#68625A] text-xs font-light mt-0.5 hidden sm:block">
+              Explore handcrafted solid teakwood suites, carved courtyard jhulas, and rare preserved antiques.
             </p>
           </div>
 
@@ -132,10 +132,10 @@ export default function FeaturedProducts({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 font-sora ${
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-[#2d2119] text-[#faf8f2] shadow-sm'
-                    : 'bg-white text-[#40342c] hover:bg-[#eadcc8]/60 border border-[#eadcc8]'
+                    ? 'bg-[#1A1715] text-[#FAF8F5] border border-[#1A1715] shadow-xs'
+                    : 'bg-white text-[#68625A] hover:text-[#1A1715] hover:bg-[#F3EFE8] border border-[#EAE5DC]'
                 }`}
               >
                 {tab.label}
@@ -163,12 +163,12 @@ export default function FeaturedProducts({
               return (
                 <div
                   key={product.id}
-                  className="w-[280px] sm:w-[320px] md:w-[360px] shrink-0 bg-white rounded-3xl overflow-hidden border border-[#eadcc8] shadow-lux hover:shadow-lux-hover transition-all duration-300 flex flex-col group"
+                  className="w-[280px] sm:w-[320px] md:w-[360px] shrink-0 bg-white rounded-2xl overflow-hidden border border-[#EAE5DC] shadow-xs hover:border-[#8A6738]/60 hover:shadow-md transition-all duration-300 flex flex-col group"
                 >
                   {/* Product Image Area */}
                   <div 
                     onClick={() => onSelectProduct(product)}
-                    className="relative aspect-[4/3] w-full overflow-hidden bg-[#2d2119] cursor-pointer img-zoom-lux"
+                    className="relative aspect-[4/3] w-full overflow-hidden bg-[#F3EFE8] cursor-pointer img-zoom-lux"
                   >
                     <img
                       src={imageSrc}
@@ -179,20 +179,20 @@ export default function FeaturedProducts({
 
                     {/* Badges */}
                     <div className="absolute top-3 left-3 flex gap-1.5 z-10">
-                      <span className="px-2.5 py-1 rounded-full bg-[#2d2119]/90 backdrop-blur-md text-[#faf8f2] text-[10px] font-bold uppercase tracking-wider font-sora">
+                      <span className="px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#1A1715] border border-[#EAE5DC] text-[10px] font-bold uppercase tracking-wider">
                         {materialText}
                       </span>
                       {product.badge && (
-                        <span className="px-2 py-0.5 rounded-full bg-[#f97316] text-white text-[10px] font-semibold tracking-wider font-sora">
+                        <span className="px-2 py-0.5 rounded-full bg-[#8A6738] text-white text-[10px] font-semibold tracking-wider">
                           {product.badge}
                         </span>
                       )}
                     </div>
 
                     {/* Quick View Hover Button */}
-                    <div className="absolute inset-0 bg-[#2d2119]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10 pointer-events-none">
-                      <span className="px-4 py-2 rounded-full bg-white text-[#2d2119] text-xs font-bold tracking-wider uppercase shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-1.5 font-sora">
-                        <Eye className="w-3.5 h-3.5 text-[#f97316]" />
+                    <div className="absolute inset-0 bg-[#1A1715]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10 pointer-events-none">
+                      <span className="px-4 py-2 rounded-full bg-white text-[#1A1715] border border-[#EAE5DC] text-xs font-semibold tracking-wider uppercase shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-1.5">
+                        <Eye className="w-3.5 h-3.5 text-[#8A6738]" />
                         <span>Quick View</span>
                       </span>
                     </div>
@@ -201,31 +201,31 @@ export default function FeaturedProducts({
                   {/* Product Information Body */}
                   <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow space-y-2.5">
                     <div className="space-y-1">
-                      <div className="text-[10px] uppercase tracking-widest text-[#f97316] font-semibold font-sora">
+                      <div className="text-[10px] uppercase tracking-widest text-[#8A6738] font-semibold">
                         {product.category}
                       </div>
                       <h3 
                         onClick={() => onSelectProduct(product)}
-                        className="font-serif text-lg font-normal text-[#2d2119] group-hover:text-[#f97316] transition-colors cursor-pointer line-clamp-1"
+                        className="font-serif text-lg font-semibold text-[#1A1715] group-hover:text-[#8A6738] transition-colors cursor-pointer line-clamp-1"
                       >
                         {productName}
                       </h3>
-                      <p className="text-xs text-[#76665a] line-clamp-2 font-light leading-relaxed">
+                      <p className="text-xs text-[#68625A] line-clamp-2 font-light leading-relaxed">
                         {product.shortDescription || product.description}
                       </p>
                     </div>
 
                     {/* Dimensions & Availability */}
-                    <div className="pt-2 border-t border-[#eadcc8]/60 flex items-center justify-between text-[11px] text-[#76665a]">
+                    <div className="pt-2 border-t border-[#EAE5DC] flex items-center justify-between text-[11px] text-[#68625A]">
                       <span className="line-clamp-1 max-w-[170px]">{dimensionText}</span>
-                      <span className="font-medium text-[#2d2119] font-sora shrink-0">{availabilityText}</span>
+                      <span className="font-medium text-[#1A1715] shrink-0">{availabilityText}</span>
                     </div>
 
                     {/* Price & Action Buttons */}
                     <div className="pt-2 flex items-center justify-between gap-2">
                       <div>
-                        <span className="text-[9px] uppercase tracking-wider text-[#76665a] block font-sora">Price</span>
-                        <span className="font-serif text-base sm:text-lg font-bold text-[#2d2119]">{priceText}</span>
+                        <span className="text-[9px] uppercase tracking-wider text-[#8E867D] block">Price</span>
+                        <span className="font-serif text-base sm:text-lg font-bold text-[#1A1715]">{priceText}</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -235,16 +235,16 @@ export default function FeaturedProducts({
                             productName: productName,
                             productCode: product.id
                           })}
-                          className="p-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition-colors"
+                          className="p-2 rounded-full bg-[#1B5E43] text-white hover:bg-[#154b35] transition-colors shadow-xs"
                           title="Enquire on WhatsApp"
                           aria-label="WhatsApp Enquiry"
                         >
-                          <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
+                          <MessageSquare className="w-3.5 h-3.5 text-white fill-current" />
                         </button>
 
                         <button
                           onClick={() => onOpenEnquiryWithPiece(productName)}
-                          className="px-3.5 py-1.5 rounded-full bg-[#2d2119] text-[#faf8f2] text-xs font-semibold hover:bg-[#40342c] transition-colors shadow-sm font-sora"
+                          className="px-3.5 py-1.5 rounded-full bg-[#F3EFE8] text-[#1A1715] border border-[#EAE5DC] hover:border-[#8A6738] hover:bg-[#EAE5DC] text-xs font-semibold transition-colors shadow-xs"
                         >
                           Enquire
                         </button>
@@ -261,21 +261,21 @@ export default function FeaturedProducts({
         {/* =========================================================================
             BOTTOM PROGRESS BAR & CONTROLS
            ========================================================================= */}
-        <div className="flex items-center justify-between pt-2.5 border-t border-[#eadcc8]/60 shrink-0 font-sora">
+        <div className="flex items-center justify-between pt-2.5 border-t border-[#EAE5DC] shrink-0">
           <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase tracking-widest text-[#76665a] font-semibold">
+            <span className="text-[10px] uppercase tracking-widest text-[#68625A] font-semibold">
               SCROLL PROGRESS
             </span>
-            <div className="w-28 sm:w-44 h-1.5 rounded-full bg-[#eadcc8] overflow-hidden">
+            <div className="w-28 sm:w-44 h-1.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] overflow-hidden">
               <div
                 ref={progressBarRef}
-                className="h-full bg-gradient-to-r from-[#fb923c] to-[#f97316] rounded-full transition-all duration-75"
+                className="h-full bg-[#8A6738] rounded-full transition-all duration-75"
                 style={{ width: '0%' }}
               />
             </div>
             <span 
               ref={progressTextRef}
-              className="text-[11px] font-bold text-[#2d2119] min-w-[32px]"
+              className="text-[11px] font-bold text-[#1A1715] min-w-[32px]"
             >
               0%
             </span>
@@ -283,9 +283,9 @@ export default function FeaturedProducts({
 
           <button
             onClick={onViewAllClick}
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#2d2119] hover:text-[#f97316] transition-colors group"
+            className="flex items-center gap-1.5 text-xs font-semibold text-[#1A1715] hover:text-[#8A6738] transition-colors group"
           >
-            <span>View All ({products.length})</span>
+            <span>View All Pieces</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
