@@ -1,5 +1,5 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
-import { ArrowUpRight, Sparkles, Layers } from 'lucide-react';
+import { ArrowUpRight, Layers } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -156,9 +156,11 @@ export default function CollectionsGrid({ categories = [], onSelectCategory }) {
           TOP NAV OVERLAY / SECTION BADGE
          ========================================================================= */}
       <div className="absolute top-0 inset-x-0 p-6 sm:p-8 lg:p-12 flex items-center justify-between z-20 pointer-events-none">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141210]/80 backdrop-blur-md border border-white/15 text-[#D5CEBF] text-xs font-semibold tracking-widest uppercase shadow-md">
-          <Sparkles className="w-3.5 h-3.5 text-[#C49A6C]" />
-          <span>SIGNATURE COLLECTIONS</span>
+        <div className="flex items-center gap-3">
+          <span className="w-8 h-px bg-[#C49A6C]" />
+          <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#FAF8F5] font-sans">
+            Signature Collections
+          </span>
         </div>
 
         <div className="hidden sm:flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141210]/80 backdrop-blur-md border border-white/15 text-[#FAF8F5] text-xs tracking-wider uppercase shadow-md">

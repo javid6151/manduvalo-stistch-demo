@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, Compass } from 'lucide-react';
+import { ArrowRight, Compass } from 'lucide-react';
 
 export default function AntiqueVintageHero({ onExploreVintage }) {
   return (
@@ -9,9 +9,11 @@ export default function AntiqueVintageHero({ onExploreVintage }) {
           
           {/* Left Editorial Narrative */}
           <div className="lg:col-span-7 space-y-6 md:space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE8] border border-[#EAE5DC] text-[#68625A] text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-              <span>THE ANTIQUE & VINTAGE VAULT</span>
+            <div className="flex items-center justify-center lg:justify-start gap-3">
+              <span className="w-8 h-px bg-[#8A6738]" />
+              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+                The Antique & Vintage Vault
+              </span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-normal leading-[1.15] text-[#1A1715]">

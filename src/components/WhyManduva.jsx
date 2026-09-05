@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Compass } from 'lucide-react';
+import { Compass } from 'lucide-react';
 
 export default function WhyManduva() {
   const brandPoints = [
@@ -37,9 +37,11 @@ export default function WhyManduva() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-[#8A6738] text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-              <span>OUR DEFINING PILLARS</span>
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-px bg-[#8A6738]" />
+              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+                Our Defining Pillars
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715]">
               Why Manduva Logillu
@@ -48,8 +50,8 @@ export default function WhyManduva() {
               We stand apart through our dedication to authentic Indian woodwork, restored architectural relics, and heirloom permanence.
             </p>
           </div>
-          <div className="shrink-0 flex items-center gap-2 text-xs font-serif text-[#1A1715] bg-white px-4 py-2 rounded-full border border-[#EAE5DC] shadow-xs">
-            <Compass className="w-4 h-4 text-[#8A6738]" />
+          <div className="shrink-0 flex items-center gap-2 text-xs font-sans text-[#68625A] bg-white px-4 py-2 rounded-full border border-[#EAE5DC] shadow-xs">
+            <Compass className="w-3.5 h-3.5 text-[#8A6738]" />
             <span>The Benchmark of Hyderabad Antiques</span>
           </div>
         </div>

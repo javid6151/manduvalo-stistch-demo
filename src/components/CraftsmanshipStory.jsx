@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hammer, Sparkles, Trees, Award, Compass } from 'lucide-react';
+import { Hammer, Trees, Award, Compass } from 'lucide-react';
 
 export default function CraftsmanshipStory({ onContactClick }) {
   const pillars = [
@@ -64,9 +64,11 @@ export default function CraftsmanshipStory({ onContactClick }) {
           {/* Right Narrative & Pillars */}
           <div className="lg:col-span-6 space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 text-[#8A6738] text-xs font-semibold tracking-widest uppercase">
-                <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-                <span>HEIRLOOM INTEGRITY</span>
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-px bg-[#8A6738]" />
+                <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+                  Heirloom Integrity
+                </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715] leading-tight">
                 Crafted for <br />

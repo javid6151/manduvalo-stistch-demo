@@ -1,5 +1,5 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
-import { Eye, MessageSquare, Sparkles, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Eye, MessageSquare, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { openWhatsApp } from '../utils/whatsapp';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -114,9 +114,11 @@ export default function FeaturedProducts({
            ========================================================================= */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 pb-3 border-b border-[#EAE5DC] shrink-0">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-[#68625A] border border-[#EAE5DC] text-xs font-semibold tracking-wider uppercase mb-1.5 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-              <span>CURATED MASTERPIECES</span>
+            <div className="flex items-center gap-3 mb-1.5">
+              <span className="w-8 h-px bg-[#8A6738]" />
+              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+                Curated Masterpieces
+              </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#1A1715]">
               Pieces Worth Keeping

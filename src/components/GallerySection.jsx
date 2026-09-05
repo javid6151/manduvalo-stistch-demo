@@ -35,9 +35,12 @@ export default function GallerySection() {
             SECTION HEADER & FILTER TABS
            ========================================================================= */}
         <ScrollReveal className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-[#68625A] border border-[#EAE5DC] text-xs font-semibold tracking-widest uppercase shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-            <span>EDITORIAL LOOKBOOK</span>
+          <div className="flex items-center justify-center gap-3">
+            <span className="w-8 h-px bg-[#8A6738]/60" />
+            <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+              Editorial Lookbook
+            </span>
+            <span className="w-8 h-px bg-[#8A6738]/60" />
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715]">

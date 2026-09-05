@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { CheckCircle2, ArrowUpRight } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 export default function BrandIntro({ onNavigateAbout }) {
@@ -44,9 +44,11 @@ export default function BrandIntro({ onNavigateAbout }) {
 
           {/* Right: Editorial Storytelling */}
           <ScrollReveal delay={200} className="lg:col-span-6 space-y-6 md:space-y-8">
-            <div className="inline-flex items-center gap-2 text-[#8A6738] text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5 text-[#8A6738]" />
-              <span>OUR HERITAGE & PHILOSOPHY</span>
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-px bg-[#8A6738]" />
+              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#8A6738] font-sans">
+                Our Heritage & Philosophy
+              </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1A1715] leading-tight">
